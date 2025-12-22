@@ -1,0 +1,13 @@
+nav2_params.yaml
+package.xml
+setup.cfg
+setup.py
+../../build/your_robot_bringup/your_robot_bringup.egg-info/PKG-INFO
+../../build/your_robot_bringup/your_robot_bringup.egg-info/SOURCES.txt
+../../build/your_robot_bringup/your_robot_bringup.egg-info/dependency_links.txt
+../../build/your_robot_bringup/your_robot_bringup.egg-info/requires.txt
+../../build/your_robot_bringup/your_robot_bringup.egg-info/top_level.txt
+../../build/your_robot_bringup/your_robot_bringup.egg-info/zip-safe
+launch/bringup.launch.py
+resource/your_robot_bringup
+src/your_robot_bringup/__init__.py

@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import LaserScan
+import serial
+import time
+import math
+
+class ScanToSerial(Node):
+    def __init__(self):
+        super().__init__('scan_to_serial')
+        self.declare_parameter('serial_port', '/dev/ttyACM1')
+        self.declare_parameter('baud', 115200)
+        self.declare_parameter('max_speed', 0.4)       # m/s equivalent for mapping
+        self.declare_parameter('wheel_base', 0.3)      # meters
+        self.declare_parameter('front_threshold', 0.6) # meters: stop distance
+        self.declare_parameter('servo_angle_center', 90)
+
+        port = self.get_parameter('serial_port').get_parameter_value().string_value
+        baud = self.get_parameter('baud').get_parameter_value().integer_value
+        self.max_speed = self.get_parameter('max_speed').get_parameter_value().double_value
+        self.wheel_base = self.get_parameter('wheel_base').get_parameter_value().double_value
+        self.front_threshold = self.get_parameter('front_threshold').get_parameter_value().double_value
+        self.servo_center = self.get_parameter('servo_angle_center').get_parameter_value().integer_value
+
+        self.get_logger().info(f'Opening serial {port} @ {baud}')
+        try:
+            self.ser = serial.Serial(port, baud, timeout=0.1)
+            time.sleep(0.5)
+        except Exception as e:
+            self.get_logger().error(f'Cannot open serial port: {e}')
+            raise
+
+        self.sub = self.create_subscription(LaserScan, '/scan', self.scan_cb, 10)
+        # optional: manual override topic could be added here
+        self.last_sent = time.time()
+
+    def scan_cb(self, msg: LaserScan):
+        ranges = list(msg.ranges)
+        # basic front region (±20 degrees)
+        angle_min = msg.angle_min
+        angle_inc = msg.angle_increment
+        n = len(ranges)
+        # compute index span for front ±20 deg
+        deg_span = math.radians(20)
+        center_idx = int((0 - angle_min) / angle_inc) if angle_inc != 0 else n//2
+        span = int(deg_span / angle_inc) if angle_inc != 0 else max(1, n//10)
+
+        left_sector = ranges[max(0, center_idx - span*2): center_idx - span]   # left-front
+        front_sector = ranges[center_idx - span: center_idx + span]            # front
+        right_sector = ranges[center_idx + span: center_idx + span*2]         # right-front
+
+        # pick safe distances
+        def safe_min(arr):
+            vals = [v for v in arr if v and not math.isinf(v) and not math.isnan(v)]
+            return min(vals) if vals else float('inf')
+
+        d_front = safe_min(front_sector)
+        d_left = safe_min(left_sector)
+        d_right = safe_min(right_sector)
+
+        # simple reactive decision:
+        linear = self.max_speed
+        angular = 0.0
+
+        if d_front < self.front_threshold:
+            # obstacle in front → stop and turn to the clearer side
+            linear = 0.0
+            if d_left > d_right:
+                angular = 0.8  # turn left
+            else:
+                angular = -0.8 # turn right
+        else:
+            # minor steering to avoid near obstacles
+            diff = d_left - d_right
+            angular = -0.5 * (diff / (max(d_left, d_right, 0.0001)))  # tuned
+
+        # differential to left/right wheel speeds (-1..1)
+        left_speed = linear - (angular * self.wheel_base / 2.0)
+        right_speed = linear + (angular * self.wheel_base / 2.0)
+
+        # normalize relative to max_speed
+        max_val = max(abs(left_speed), abs(right_speed), self.max_speed)
+        if max_val > self.max_speed:
+            left_speed *= (self.max_speed / max_val)
+            right_speed *= (self.max_speed / max_val)
+
+        left_norm = left_speed / self.max_speed
+        right_norm = right_speed / self.max_speed
+
+        # clamp -1..1
+        left_norm = max(-1.0, min(1.0, left_norm))
+        right_norm = max(-1.0, min(1.0, right_norm))
+
+        # optional: compute servo angle as steering cue
+        servo_angle = int(self.servo_center + 20 * (-angular))  # tune multiplier
+
+        # send serial commands
+        try:
+            mline = f"M,{left_norm:.3f},{right_norm:.3f}\n"
+            sline = f"S,{servo_angle}\n"
+            self.ser.write(mline.encode('ascii'))
+            self.ser.write(sline.encode('ascii'))
+            self.last_sent = time.time()
+        except Exception as e:
+            self.get_logger().error(f"Serial write error: {e}")
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = ScanToSerial()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+

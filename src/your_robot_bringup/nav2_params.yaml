@@ -1,0 +1,94 @@
+amcl:
+  ros__parameters:
+    use_sim_time: False
+
+bt_navigator: {}
+
+controller_server:
+  ros__parameters:
+    use_sim_time: False
+    controller_frequency: 20.0
+    min_vel_x: -0.2
+    max_vel_x: 0.35
+    min_vel_y: 0.0
+    max_vel_y: 0.0
+    max_rotational_vel: 1.0
+    min_rotational_vel: -1.0
+    acc_lim_x: 0.5
+    acc_lim_y: 0.0
+    acc_lim_theta: 1.0
+    holonomic_robot: false
+    rotational_vel_saturation: true
+    controller_plugins: ["FollowPath"]
+    FollowPath:
+      plugin: "dwb_core::DWBLocalPlanner"
+      # DWB settings tuned for slow heavy rover
+      sim_time: 1.5
+      sim_granularity: 0.1
+      vx_samples: 6
+      vtheta_samples: 20
+      max_vel_x: 0.35
+      min_vel_x: -0.2
+      max_vel_theta: 1.0
+      min_vel_theta: -1.0
+
+global_costmap:
+  ros__parameters:
+    global_frame: map
+    robot_base_frame: base_link
+    update_frequency: 1.0
+    publish_frequency: 1.0
+    static_map: false
+    rolling_window: false
+    plugins: ["obstacle_layer","inflation_layer"]
+    obstacle_layer:
+      plugin: "nav2_costmap_2d::ObstacleLayer"
+      observation_sources: "scan"
+      scan:
+        topic: /scan
+        expected_update_rate: 10.0
+        sensor_frame: lidar_link
+        data_type: LaserScan
+        marking: true
+        clearing: true
+    inflation_layer:
+      plugin: "nav2_costmap_2d::InflationLayer"
+      inflation_radius: 0.15
+
+local_costmap:
+  ros__parameters:
+    global_frame: odom
+    robot_base_frame: base_link
+    update_frequency: 5.0
+    publish_frequency: 2.0
+    rolling_window: true
+    width: 6.0
+    plugins: ["obstacle_layer","inflation_layer"]
+    obstacle_layer:
+      plugin: "nav2_costmap_2d::ObstacleLayer"
+      observation_sources: "scan"
+      scan:
+        topic: /scan
+        expected_update_rate: 10.0
+        sensor_frame: lidar_link
+        data_type: LaserScan
+        marking: true
+        clearing: true
+    inflation_layer:
+      plugin: "nav2_costmap_2d::InflationLayer"
+      inflation_radius: 0.12
+
+planner_server:
+  ros__parameters:
+    expected_planner_frequency: 1.0
+    planner_plugins: ["GridBased"]
+    GridBased:
+      plugin: "nav2_navfn_planner/NavfnPlanner"
+
+behaviour_tree:
+  ros__parameters:
+    bt_xml_filename: "navigate_w_replanning_time.xml"
+
+nav2_bot_params:
+  ros__parameters:
+    use_sim_time: False

@@ -1,0 +1,14 @@
+slam_toolbox:
+  ros__parameters:
+    use_sim_time: false
+
+    map_frame: map
+    base_frame: base_link
+    odom_frame: odom
+
+    use_scan_matching: true
+    use_odom: true
+
+    mode: mapping
+
+    scan_topic: /scan

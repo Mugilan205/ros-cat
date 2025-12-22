@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="simple_rover">
+  <link name="base_link"/>
+  <link name="left_wheel"/>
+  <link name="right_wheel"/>
+  <link name="lidar_link"/>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0.12 0 0.12" rpy="0 0 0"/>
+  </joint>
+
+  <!-- wheel joints are fixed in this simple model (no visuals needed) -->
+  <joint name="left_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="0 0.12 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="right_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz="0 -0.12 0" rpy="0 0 0"/>
+  </joint>
+</robot>
