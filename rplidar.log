@@ -1,0 +1,9 @@
+nohup: ignoring input
+[INFO] [1766563506.655031475] [rplidar_node]: RPLIDAR running on ROS 2 package rplidar_ros. SDK Version: '1.12.0'
+[INFO] [1766563509.165689547] [rplidar_node]: RPLIDAR S/N: B5EEECF0C3E09ED2A0EA98F326364110
+[INFO] [1766563509.165843899] [rplidar_node]: Firmware Ver: 1.29
+[INFO] [1766563509.165880807] [rplidar_node]: Hardware Rev: 7
+[INFO] [1766563509.168658307] [rplidar_node]: RPLidar health status : '0'
+[INFO] [1766563509.168792362] [rplidar_node]: Start
+[INFO] [1766563509.717777251] [rplidar_node]: current scan mode: Sensitivity, max_distance: 12.0 m, Point number: 7.9K , angle_compensate: 2, flip_x_axis 0
+[INFO] [1766564880.647119989] [rclcpp]: signal_handler(signum=15)

@@ -1,0 +1,101 @@
+[0.030s] Invoking command in '/home/caterpillar/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caterpillar/ros2_ws/install/your_robot_bringup:/home/caterpillar/ros2_ws/install/bts_motor_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/caterpillar/ros2_ws/build/rplidar_ros -- -j4 -l4
+[0.211s] [ 11%] Building CXX object CMakeFiles/rplidar_composition_node.dir/src/rplidar_node.cpp.o
+[0.685s] In file included from /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:36:
+[0.685s] /home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:50: warning: "M_PI" redefined
+[0.685s]    50 | #define M_PI 3.1415926535897932384626433832795
+[0.685s]       | 
+[0.685s] In file included from /usr/include/c++/13/cmath:47,
+[0.685s]                  from /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:18,
+[0.685s]                  from /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:24,
+[0.685s]                  from /opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23,
+[0.686s]                  from /opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50,
+[0.686s]                  from /opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25,
+[0.686s]                  from /opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+[0.686s]                  from /opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+[0.686s]                  from /opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22,
+[0.686s]                  from /opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38,
+[0.686s]                  from /opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+[0.686s]                  from /opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21,
+[0.686s]                  from /opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172,
+[0.686s]                  from /home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:34:
+[0.686s] /usr/include/math.h:1152: note: this is the location of the previous definition
+[0.686s]  1152 | # define M_PI           3.14159265358979323846  /* pi */
+[0.687s]       | 
+[4.983s] In file included from /home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:39,
+[4.983s]                  from /home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:41:
+[4.983s] /home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_protocol.h:59:14: warning: ISO C++ forbids zero-size array ‘data’ [-Wpedantic]
+[4.983s]    59 |     _u8 data[0];
+[4.984s]       |              ^
+[4.984s] In file included from /home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:40:
+[4.984s] /home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_cmd.h:260:18: warning: ISO C++ forbids zero-size array ‘payload’ [-Wpedantic]
+[4.984s]   260 |     _u8  payload[0];
+[4.984s]       |                  ^
+[5.105s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp: In member function ‘void rplidar_ros::rplidar_node::stop_motor({anonymous}::EmptyRequest, {anonymous}::EmptyResponse)’:
+[5.105s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:246:50: warning: unused parameter ‘req’ [-Wunused-parameter]
+[5.105s]   246 | void rplidar_node::stop_motor(const EmptyRequest req, EmptyResponse res)
+[5.105s]       |                               ~~~~~~~~~~~~~~~~~~~^~~
+[5.105s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:246:69: warning: unused parameter ‘res’ [-Wunused-parameter]
+[5.106s]   246 | void rplidar_node::stop_motor(const EmptyRequest req, EmptyResponse res)
+[5.106s]       |                                                       ~~~~~~~~~~~~~~^~~
+[5.107s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp: In member function ‘void rplidar_ros::rplidar_node::start_motor({anonymous}::EmptyRequest, {anonymous}::EmptyResponse)’:
+[5.107s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:259:51: warning: unused parameter ‘req’ [-Wunused-parameter]
+[5.108s]   259 | void rplidar_node::start_motor(const EmptyRequest req, EmptyResponse res)
+[5.108s]       |                                ~~~~~~~~~~~~~~~~~~~^~~
+[5.108s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:259:70: warning: unused parameter ‘res’ [-Wunused-parameter]
+[5.108s]   259 | void rplidar_node::start_motor(const EmptyRequest req, EmptyResponse res)
+[5.108s]       |                                                        ~~~~~~~~~~~~~~^~~
+[5.117s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp: In member function ‘void rplidar_ros::rplidar_node::publish_loop()’:
+[5.118s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:386:25: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+[5.118s]   386 |           for (j = 0; j < m_angle_compensate_multiple; j++) {
+[5.118s]       |                       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[5.118s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:407:44: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+[5.119s]   407 |       for (size_t x = start_node, y = 0; x < end_node; ++x, ++y) {
+[5.119s]       |                                          ~~^~~~~~~~~~
+[5.119s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:414:11: warning: unused variable ‘angle_min’ [-Wunused-variable]
+[5.119s]   414 |     float angle_min = deg_2_rad(0.0f);
+[5.119s]       |           ^~~~~~~~~
+[5.119s] /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:415:11: warning: unused variable ‘angle_max’ [-Wunused-variable]
+[5.119s]   415 |     float angle_max = deg_2_rad(359.0f);
+[5.119s]       |           ^~~~~~~~~
+[13.078s] [ 22%] Linking CXX shared library librplidar_composition_node.so
+[13.930s] [ 77%] Built target rplidar_composition_node
+[13.996s] [ 88%] Linking CXX executable rplidar_composition
+[14.698s] [100%] Built target rplidar_composition
+[14.727s] Invoked command in '/home/caterpillar/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caterpillar/ros2_ws/install/your_robot_bringup:/home/caterpillar/ros2_ws/install/bts_motor_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/caterpillar/ros2_ws/build/rplidar_ros -- -j4 -l4
+[14.751s] Invoking command in '/home/caterpillar/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caterpillar/ros2_ws/install/your_robot_bringup:/home/caterpillar/ros2_ws/install/bts_motor_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/caterpillar/ros2_ws/build/rplidar_ros
+[14.770s] -- Install configuration: ""
+[14.771s] -- Execute custom install script
+[14.771s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[14.772s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar.launch.py
+[14.772s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch.py
+[14.772s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch.py
+[14.772s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch.py
+[14.772s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch.py
+[14.773s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar.launch.py
+[14.773s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch.py
+[14.773s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch.py
+[14.773s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch.py
+[14.773s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz
+[14.774s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/librplidar_composition_node.so
+[14.774s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/include/rplidar_node.hpp
+[14.774s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/include/visibility.h
+[14.775s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[14.775s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+[14.775s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+[14.775s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+[14.775s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+[14.776s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+[14.776s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+[14.776s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+[14.776s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+[14.776s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+[14.777s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+[14.777s] -- Symlinking: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.dsv
+[14.800s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+[14.800s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/rclcpp_components/rplidar_ros
+[14.800s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[14.800s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[14.800s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+[14.800s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+[14.801s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.xml
+[14.804s] Invoked command in '/home/caterpillar/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/caterpillar/ros2_ws/install/your_robot_bringup:/home/caterpillar/ros2_ws/install/bts_motor_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/caterpillar/ros2_ws/build/rplidar_ros

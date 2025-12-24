@@ -6,8 +6,21 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     # 1) RPLidar node (adjust to your driver launch/executable if different)
-    ld.add_action(Node(package='rplidar_ros', executable='rplidar_composition', name='rplidar_composition',
-                       output='screen', parameters=[{'serial_port': '/dev/ttyUSB0', 'frame_id': 'laser'}]))
+    ld.add_action(Node(
+        package='rplidar_ros',
+        executable='rplidar_composition',
+        name='rplidar_composition',
+        output='screen',
+        parameters=[{
+            'serial_port': '/dev/ttyUSB0',
+            'serial_baudrate': 115200,
+            'frame_id': 'laser',
+            'use_scan_mode': False,
+            'force_scan_mode': False,
+            'topic_name': 'scan',
+            'auto_standby': False
+        }]
+    ))
 
     # 2) robot_state_publisher (URDF)
     ld.add_action(Node(package='robot_state_publisher', executable='robot_state_publisher',

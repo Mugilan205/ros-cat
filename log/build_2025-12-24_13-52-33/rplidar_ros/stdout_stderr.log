@@ -1,0 +1,145 @@
+-- Found ament_cmake_auto: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_auto/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+In this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/rplidar_ros` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.
+-- Configuring done (2.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/caterpillar/ros2_ws/build/rplidar_ros
+[ 11%] Building CXX object CMakeFiles/rplidar_composition_node.dir/src/rplidar_node.cpp.o
+In file included from /home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:36:
+/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:50: warning: "M_PI" redefined
+   50 | #define M_PI 3.1415926535897932384626433832795
+      | 
+In file included from /usr/include/c++/13/cmath:47,
+                 from /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:18,
+                 from /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:24,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172,
+                 from /home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:34:
+/usr/include/math.h:1152: note: this is the location of the previous definition
+ 1152 | # define M_PI           3.14159265358979323846  /* pi */
+      | 
+In file included from /home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:39,
+                 from /home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:41:
+/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_protocol.h:59:14: warning: ISO C++ forbids zero-size array ‘data’ [-Wpedantic]
+   59 |     _u8 data[0];
+      |              ^
+In file included from /home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:40:
+/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_cmd.h:260:18: warning: ISO C++ forbids zero-size array ‘payload’ [-Wpedantic]
+  260 |     _u8  payload[0];
+      |                  ^
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp: In member function ‘void rplidar_ros::rplidar_node::stop_motor({anonymous}::EmptyRequest, {anonymous}::EmptyResponse)’:
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:246:50: warning: unused parameter ‘req’ [-Wunused-parameter]
+  246 | void rplidar_node::stop_motor(const EmptyRequest req, EmptyResponse res)
+      |                               ~~~~~~~~~~~~~~~~~~~^~~
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:246:69: warning: unused parameter ‘res’ [-Wunused-parameter]
+  246 | void rplidar_node::stop_motor(const EmptyRequest req, EmptyResponse res)
+      |                                                       ~~~~~~~~~~~~~~^~~
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp: In member function ‘void rplidar_ros::rplidar_node::start_motor({anonymous}::EmptyRequest, {anonymous}::EmptyResponse)’:
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:259:51: warning: unused parameter ‘req’ [-Wunused-parameter]
+  259 | void rplidar_node::start_motor(const EmptyRequest req, EmptyResponse res)
+      |                                ~~~~~~~~~~~~~~~~~~~^~~
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:259:70: warning: unused parameter ‘res’ [-Wunused-parameter]
+  259 | void rplidar_node::start_motor(const EmptyRequest req, EmptyResponse res)
+      |                                                        ~~~~~~~~~~~~~~^~~
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp: In member function ‘void rplidar_ros::rplidar_node::publish_loop()’:
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:386:25: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+  386 |           for (j = 0; j < m_angle_compensate_multiple; j++) {
+      |                       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:407:44: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+  407 |       for (size_t x = start_node, y = 0; x < end_node; ++x, ++y) {
+      |                                          ~~^~~~~~~~~~
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:414:11: warning: unused variable ‘angle_min’ [-Wunused-variable]
+  414 |     float angle_min = deg_2_rad(0.0f);
+      |           ^~~~~~~~~
+/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:415:11: warning: unused variable ‘angle_max’ [-Wunused-variable]
+  415 |     float angle_max = deg_2_rad(359.0f);
+      |           ^~~~~~~~~
+[ 22%] Linking CXX shared library librplidar_composition_node.so
+[ 77%] Built target rplidar_composition_node
+[ 88%] Building CXX object CMakeFiles/rplidar_composition.dir/src/standalone_rplidar.cpp.o
+In file included from /home/caterpillar/ros2_ws/src/rplidar_ros/src/standalone_rplidar.cpp:16:
+/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:50: warning: "M_PI" redefined
+   50 | #define M_PI 3.1415926535897932384626433832795
+      | 
+In file included from /usr/include/c++/13/cmath:47,
+                 from /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:18,
+                 from /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:24,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172,
+                 from /home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:34:
+/usr/include/math.h:1152: note: this is the location of the previous definition
+ 1152 | # define M_PI           3.14159265358979323846  /* pi */
+      | 
+In file included from /home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:39,
+                 from /home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:41:
+/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_protocol.h:59:14: warning: ISO C++ forbids zero-size array ‘data’ [-Wpedantic]
+   59 |     _u8 data[0];
+      |              ^
+In file included from /home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:40:
+/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_cmd.h:260:18: warning: ISO C++ forbids zero-size array ‘payload’ [-Wpedantic]
+  260 |     _u8  payload[0];
+      |                  ^
+/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:76:14: warning: ‘float rplidar_ros::getAngle(const rplidar_response_measurement_node_hq_t&)’ defined but not used [-Wunused-function]
+   76 | static float getAngle(const rplidar_response_measurement_node_hq_t & node)
+      |              ^~~~~~~~
+[100%] Linking CXX executable rplidar_composition
+[100%] Built target rplidar_composition
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar.launch.py
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch.py
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch.py
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch.py
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch.py
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar.launch.py
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch.py
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch.py
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch.py
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/librplidar_composition_node.so
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/include/rplidar_node.hpp
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/include/visibility.h
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+-- Symlinking: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.dsv
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/rclcpp_components/rplidar_ros
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.xml
