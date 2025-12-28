@@ -1,0 +1,10 @@
+[console_scripts]
+a_star_planner = rover_navigation.global_planner_a_star:main
+esp8266_bridge = rover_navigation.esp8266_bridge:main
+lwb_planner = rover_navigation.local_planner_lwb:main
+navigation_dashboard = rover_navigation.dashboard_node:main
+obstacle_detection = rover_navigation.obstacle_detection:main
+odometry_node = rover_navigation.odometry_node:main
+path_executor = rover_navigation.path_executor:main
+planner_manager = rover_navigation.planner_manager:main
+rrt_planner = rover_navigation.rrt_planner:main

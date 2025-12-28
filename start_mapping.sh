@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Load ROS2
 source /opt/ros/jazzy/setup.bash
 
@@ -27,3 +26,4 @@ echo "Starting RViz2..."
 gnome-terminal -- bash -c "source /opt/ros/jazzy/setup.bash; rviz2; exec bash"
 
 echo "All systems started successfully!"
+

@@ -1,0 +1,677 @@
+[0.000000] (-) TimerEvent: {}
+[0.000515] (bts_motor_controller) JobQueued: {'identifier': 'bts_motor_controller', 'dependencies': OrderedDict()}
+[0.001005] (rover_navigation) JobQueued: {'identifier': 'rover_navigation', 'dependencies': OrderedDict()}
+[0.001066] (rplidar_ros) JobQueued: {'identifier': 'rplidar_ros', 'dependencies': OrderedDict()}
+[0.001542] (your_robot_bringup) JobQueued: {'identifier': 'your_robot_bringup', 'dependencies': OrderedDict({'bts_motor_controller': '/home/caterpillar/ros2_ws/install/bts_motor_controller', 'rplidar_ros': '/home/caterpillar/ros2_ws/install/rplidar_ros'})}
+[0.001758] (bts_motor_controller) JobStarted: {'identifier': 'bts_motor_controller'}
+[0.027362] (rplidar_ros) JobStarted: {'identifier': 'rplidar_ros'}
+[0.039060] (rover_navigation) JobStarted: {'identifier': 'rover_navigation'}
+[0.099652] (-) TimerEvent: {}
+[0.200276] (-) TimerEvent: {}
+[0.301593] (-) TimerEvent: {}
+[0.402169] (-) TimerEvent: {}
+[0.502799] (-) TimerEvent: {}
+[0.603395] (-) TimerEvent: {}
+[0.705551] (-) TimerEvent: {}
+[0.806948] (-) TimerEvent: {}
+[0.827206] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'cmake'}
+[0.829258] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '/home/caterpillar/ros2_ws/src/rplidar_ros', '-DCMAKE_INSTALL_PREFIX=/home/caterpillar/ros2_ws/install/rplidar_ros'], 'cwd': '/home/caterpillar/ros2_ws/build/rplidar_ros', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'caterpillar', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/cursor/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/caterpillar', 'CHROME_DESKTOP': 'cursor.desktop', 'TERM_PROGRAM_VERSION': '2.2.44', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/cursor.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/cursor/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/cursor/cursor', 'MANAGERPID': '1906', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2152', 'BUNDLED_DEBUGPY_PATH': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2999', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'caterpillar', 'JOURNAL_STREAM': '8:16149', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'caterpillar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/caterpillar-desktop:@/tmp/.ICE-unix/2126,unix/caterpillar-desktop:/tmp/.ICE-unix/2126', 'INVOCATION_ID': '0400bf9b0c8d4fd79e90ee71bbfd76c6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-554ddbc6fab74a1c.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.4HTZH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d4e02dc763.sock', 'TERM_PROGRAM': 'vscode', 'CURSOR_TRACE_ID': 'f6847b3d43bc488584ef1e172d53c0ec', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_IPC_AUTH_TOKEN': '37cdce435a9ada4fbd4def0da45104b492bfbce3ee50e140d07c64d7c758e7d5', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/caterpillar/ros2_ws/build/rplidar_ros', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.907301] (-) TimerEvent: {}
+[1.008146] (-) TimerEvent: {}
+[1.108551] (-) TimerEvent: {}
+[1.208927] (-) TimerEvent: {}
+[1.309523] (-) TimerEvent: {}
+[1.410542] (-) TimerEvent: {}
+[1.513327] (-) TimerEvent: {}
+[1.563354] (rplidar_ros) StdoutLine: {'line': b'-- Found ament_cmake_auto: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_auto/cmake)\n'}
+[1.614775] (-) TimerEvent: {}
+[1.717839] (-) TimerEvent: {}
+[1.820833] (-) TimerEvent: {}
+[1.921433] (-) TimerEvent: {}
+[1.977386] (rplidar_ros) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.021581] (-) TimerEvent: {}
+[2.101813] (rplidar_ros) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[2.122654] (-) TimerEvent: {}
+[2.227267] (-) TimerEvent: {}
+[2.327910] (-) TimerEvent: {}
+[2.430777] (-) TimerEvent: {}
+[2.533132] (-) TimerEvent: {}
+[2.633845] (-) TimerEvent: {}
+[2.734634] (-) TimerEvent: {}
+[2.802387] (rplidar_ros) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[2.833100] (rplidar_ros) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[2.834726] (-) TimerEvent: {}
+[2.902613] (rplidar_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.935872] (-) TimerEvent: {}
+[3.012879] (rplidar_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.036776] (-) TimerEvent: {}
+[3.137211] (-) TimerEvent: {}
+[3.241081] (-) TimerEvent: {}
+[3.310199] (rplidar_ros) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[3.317393] (rplidar_ros) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.342201] (-) TimerEvent: {}
+[3.444806] (-) TimerEvent: {}
+[3.545753] (-) TimerEvent: {}
+[3.590749] (rplidar_ros) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.647789] (-) TimerEvent: {}
+[3.748424] (-) TimerEvent: {}
+[3.849535] (-) TimerEvent: {}
+[3.952013] (-) TimerEvent: {}
+[4.053477] (-) TimerEvent: {}
+[4.155761] (-) TimerEvent: {}
+[4.260949] (-) TimerEvent: {}
+[4.361589] (-) TimerEvent: {}
+[4.464818] (-) TimerEvent: {}
+[4.565480] (-) TimerEvent: {}
+[4.670942] (-) TimerEvent: {}
+[4.776081] (-) TimerEvent: {}
+[4.876767] (-) TimerEvent: {}
+[4.921832] (rplidar_ros) StderrLine: {'line': b'\x1b[0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/rplidar_ros` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.\x1b[0m\n'}
+[4.980850] (-) TimerEvent: {}
+[5.034145] (rplidar_ros) StdoutLine: {'line': b'-- Configuring done (4.0s)\n'}
+[5.082443] (-) TimerEvent: {}
+[5.183727] (-) TimerEvent: {}
+[5.208596] (bts_motor_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--uninstall', '--editable', '--build-directory', '/home/caterpillar/ros2_ws/build/bts_motor_controller/build'], 'cwd': '/home/caterpillar/ros2_ws/build/bts_motor_controller', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'caterpillar', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/cursor/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/caterpillar', 'CHROME_DESKTOP': 'cursor.desktop', 'TERM_PROGRAM_VERSION': '2.2.44', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/cursor.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/cursor/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/cursor/cursor', 'MANAGERPID': '1906', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2152', 'BUNDLED_DEBUGPY_PATH': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2999', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'caterpillar', 'JOURNAL_STREAM': '8:16149', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'caterpillar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/caterpillar-desktop:@/tmp/.ICE-unix/2126,unix/caterpillar-desktop:/tmp/.ICE-unix/2126', 'INVOCATION_ID': '0400bf9b0c8d4fd79e90ee71bbfd76c6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-554ddbc6fab74a1c.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.4HTZH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d4e02dc763.sock', 'TERM_PROGRAM': 'vscode', 'CURSOR_TRACE_ID': 'f6847b3d43bc488584ef1e172d53c0ec', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_IPC_AUTH_TOKEN': '37cdce435a9ada4fbd4def0da45104b492bfbce3ee50e140d07c64d7c758e7d5', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/caterpillar/ros2_ws/build/bts_motor_controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/caterpillar/ros2_ws/build/bts_motor_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[5.288850] (-) TimerEvent: {}
+[5.345965] (rplidar_ros) StdoutLine: {'line': b'-- Generating done (0.2s)\n'}
+[5.375001] (rplidar_ros) StdoutLine: {'line': b'-- Build files have been written to: /home/caterpillar/ros2_ws/build/rplidar_ros\n'}
+[5.395932] (-) TimerEvent: {}
+[5.433124] (rover_navigation) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/rover_navigation', 'build', '--build-base', '/home/caterpillar/ros2_ws/build/rover_navigation/build', 'install', '--record', '/home/caterpillar/ros2_ws/build/rover_navigation/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/caterpillar/ros2_ws/src/rover_navigation', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'caterpillar', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/cursor/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/caterpillar', 'CHROME_DESKTOP': 'cursor.desktop', 'TERM_PROGRAM_VERSION': '2.2.44', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/cursor.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/cursor/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/cursor/cursor', 'MANAGERPID': '1906', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2152', 'BUNDLED_DEBUGPY_PATH': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2999', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'caterpillar', 'JOURNAL_STREAM': '8:16149', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'caterpillar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/caterpillar-desktop:@/tmp/.ICE-unix/2126,unix/caterpillar-desktop:/tmp/.ICE-unix/2126', 'INVOCATION_ID': '0400bf9b0c8d4fd79e90ee71bbfd76c6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-554ddbc6fab74a1c.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.4HTZH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d4e02dc763.sock', 'TERM_PROGRAM': 'vscode', 'CURSOR_TRACE_ID': 'f6847b3d43bc488584ef1e172d53c0ec', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_IPC_AUTH_TOKEN': '37cdce435a9ada4fbd4def0da45104b492bfbce3ee50e140d07c64d7c758e7d5', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/caterpillar/ros2_ws/build/rover_navigation', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/caterpillar/ros2_ws/build/rover_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[5.461732] (rplidar_ros) CommandEnded: {'returncode': 0}
+[5.462589] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'build'}
+[5.462658] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/caterpillar/ros2_ws/build/rplidar_ros', '--', '-j4', '-l4'], 'cwd': '/home/caterpillar/ros2_ws/build/rplidar_ros', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'caterpillar', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/cursor/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/caterpillar', 'CHROME_DESKTOP': 'cursor.desktop', 'TERM_PROGRAM_VERSION': '2.2.44', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/cursor.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/cursor/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/cursor/cursor', 'MANAGERPID': '1906', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2152', 'BUNDLED_DEBUGPY_PATH': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2999', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'caterpillar', 'JOURNAL_STREAM': '8:16149', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'caterpillar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/caterpillar-desktop:@/tmp/.ICE-unix/2126,unix/caterpillar-desktop:/tmp/.ICE-unix/2126', 'INVOCATION_ID': '0400bf9b0c8d4fd79e90ee71bbfd76c6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-554ddbc6fab74a1c.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.4HTZH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d4e02dc763.sock', 'TERM_PROGRAM': 'vscode', 'CURSOR_TRACE_ID': 'f6847b3d43bc488584ef1e172d53c0ec', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_IPC_AUTH_TOKEN': '37cdce435a9ada4fbd4def0da45104b492bfbce3ee50e140d07c64d7c758e7d5', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/caterpillar/ros2_ws/build/rplidar_ros', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[5.502179] (-) TimerEvent: {}
+[5.614811] (-) TimerEvent: {}
+[5.717319] (-) TimerEvent: {}
+[5.825148] (-) TimerEvent: {}
+[5.926964] (-) TimerEvent: {}
+[6.027663] (-) TimerEvent: {}
+[6.128238] (-) TimerEvent: {}
+[6.180764] (rplidar_ros) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/rplidar_composition_node.dir/src/rplidar_node.cpp.o\x1b[0m\n'}
+[6.229136] (-) TimerEvent: {}
+[6.334991] (-) TimerEvent: {}
+[6.435496] (-) TimerEvent: {}
+[6.537765] (-) TimerEvent: {}
+[6.638237] (-) TimerEvent: {}
+[6.741945] (-) TimerEvent: {}
+[6.805568] (bts_motor_controller) StdoutLine: {'line': b'running develop\n'}
+[6.806223] (rover_navigation) StdoutLine: {'line': b'running egg_info\n'}
+[6.843965] (-) TimerEvent: {}
+[6.920054] (rover_navigation) StdoutLine: {'line': b'writing ../../build/rover_navigation/rover_navigation.egg-info/PKG-INFO\n'}
+[6.924055] (rover_navigation) StdoutLine: {'line': b'writing dependency_links to ../../build/rover_navigation/rover_navigation.egg-info/dependency_links.txt\n'}
+[6.924296] (rover_navigation) StdoutLine: {'line': b'writing entry points to ../../build/rover_navigation/rover_navigation.egg-info/entry_points.txt\n'}
+[6.924435] (rover_navigation) StdoutLine: {'line': b'writing requirements to ../../build/rover_navigation/rover_navigation.egg-info/requires.txt\n'}
+[6.924604] (rover_navigation) StdoutLine: {'line': b'writing top-level names to ../../build/rover_navigation/rover_navigation.egg-info/top_level.txt\n'}
+[6.944045] (-) TimerEvent: {}
+[7.048984] (-) TimerEvent: {}
+[7.149635] (-) TimerEvent: {}
+[7.188313] (rover_navigation) StdoutLine: {'line': b"reading manifest file '../../build/rover_navigation/rover_navigation.egg-info/SOURCES.txt'\n"}
+[7.191876] (rover_navigation) StdoutLine: {'line': b"writing manifest file '../../build/rover_navigation/rover_navigation.egg-info/SOURCES.txt'\n"}
+[7.194596] (rover_navigation) StdoutLine: {'line': b'running build\n'}
+[7.194835] (rover_navigation) StdoutLine: {'line': b'running build_py\n'}
+[7.197850] (rover_navigation) StdoutLine: {'line': b'copying rover_navigation/local_planner_lwb.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation\n'}
+[7.198188] (rover_navigation) StdoutLine: {'line': b'copying rover_navigation/dashboard_node.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation\n'}
+[7.198359] (rover_navigation) StdoutLine: {'line': b'copying rover_navigation/global_planner_a_star.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation\n'}
+[7.198509] (rover_navigation) StdoutLine: {'line': b'copying rover_navigation/costmap.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation\n'}
+[7.198646] (rover_navigation) StdoutLine: {'line': b'copying rover_navigation/planner_manager.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation\n'}
+[7.203578] (rover_navigation) StdoutLine: {'line': b'running install\n'}
+[7.231578] (rover_navigation) StdoutLine: {'line': b'running install_lib\n'}
+[7.252071] (-) TimerEvent: {}
+[7.355138] (-) TimerEvent: {}
+[7.439472] (rover_navigation) StdoutLine: {'line': b'copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/local_planner_lwb.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation\n'}
+[7.446769] (rover_navigation) StdoutLine: {'line': b'copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/dashboard_node.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation\n'}
+[7.447258] (rover_navigation) StdoutLine: {'line': b'copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/global_planner_a_star.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation\n'}
+[7.447475] (rover_navigation) StdoutLine: {'line': b'copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/costmap.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation\n'}
+[7.464337] (rover_navigation) StdoutLine: {'line': b'copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/planner_manager.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation\n'}
+[7.464790] (-) TimerEvent: {}
+[7.465137] (rover_navigation) StdoutLine: {'line': b'byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/local_planner_lwb.py to local_planner_lwb.cpython-312.pyc\n'}
+[7.465426] (rover_navigation) StdoutLine: {'line': b'byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/dashboard_node.py to dashboard_node.cpython-312.pyc\n'}
+[7.465744] (rover_navigation) StdoutLine: {'line': b'byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/global_planner_a_star.py to global_planner_a_star.cpython-312.pyc\n'}
+[7.465974] (rover_navigation) StdoutLine: {'line': b'byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/costmap.py to costmap.cpython-312.pyc\n'}
+[7.476661] (rover_navigation) StdoutLine: {'line': b'byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/planner_manager.py to planner_manager.cpython-312.pyc\n'}
+[7.479070] (rover_navigation) StdoutLine: {'line': b'running install_data\n'}
+[7.483996] (rover_navigation) StdoutLine: {'line': b'copying package.xml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation\n'}
+[7.488619] (rover_navigation) StdoutLine: {'line': b'copying launch/a_star_lwb_navigation.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch\n'}
+[7.493059] (rover_navigation) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.550720] (rover_navigation) StdoutLine: {'line': b"removing '/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation-0.0.1-py3.12.egg-info' (and everything under it)\n"}
+[7.551105] (rover_navigation) StdoutLine: {'line': b'Copying ../../build/rover_navigation/rover_navigation.egg-info to /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation-0.0.1-py3.12.egg-info\n'}
+[7.551271] (rover_navigation) StdoutLine: {'line': b'running install_scripts\n'}
+[7.568406] (-) TimerEvent: {}
+[7.604710] (bts_motor_controller) StdoutLine: {'line': b'Removing /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts-motor-controller.egg-link (link to .)\n'}
+[7.673241] (-) TimerEvent: {}
+[7.775340] (-) TimerEvent: {}
+[7.857600] (bts_motor_controller) CommandEnded: {'returncode': 0}
+[7.860079] (bts_motor_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/bts_motor_controller', 'build', '--build-base', '/home/caterpillar/ros2_ws/build/bts_motor_controller/build', 'install', '--record', '/home/caterpillar/ros2_ws/build/bts_motor_controller/install.log', '--single-version-externally-managed', 'install_data', '--force'], 'cwd': '/home/caterpillar/ros2_ws/src/bts_motor_controller', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'caterpillar', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/cursor/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/caterpillar', 'CHROME_DESKTOP': 'cursor.desktop', 'TERM_PROGRAM_VERSION': '2.2.44', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/cursor.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/cursor/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/cursor/cursor', 'MANAGERPID': '1906', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2152', 'BUNDLED_DEBUGPY_PATH': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2999', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'caterpillar', 'JOURNAL_STREAM': '8:16149', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'caterpillar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/caterpillar-desktop:@/tmp/.ICE-unix/2126,unix/caterpillar-desktop:/tmp/.ICE-unix/2126', 'INVOCATION_ID': '0400bf9b0c8d4fd79e90ee71bbfd76c6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-554ddbc6fab74a1c.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.4HTZH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d4e02dc763.sock', 'TERM_PROGRAM': 'vscode', 'CURSOR_TRACE_ID': 'f6847b3d43bc488584ef1e172d53c0ec', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_IPC_AUTH_TOKEN': '37cdce435a9ada4fbd4def0da45104b492bfbce3ee50e140d07c64d7c758e7d5', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/caterpillar/ros2_ws/build/bts_motor_controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/caterpillar/ros2_ws/build/bts_motor_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[7.878467] (-) TimerEvent: {}
+[7.979067] (-) TimerEvent: {}
+[8.079488] (-) TimerEvent: {}
+[8.184332] (-) TimerEvent: {}
+[8.248644] (rover_navigation) StdoutLine: {'line': b'Installing a_star_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation\n'}
+[8.255876] (rover_navigation) StdoutLine: {'line': b'Installing esp8266_bridge script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation\n'}
+[8.288098] (-) TimerEvent: {}
+[8.312411] (rover_navigation) StdoutLine: {'line': b'Installing lwb_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation\n'}
+[8.314071] (rover_navigation) StdoutLine: {'line': b'Installing navigation_dashboard script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation\n'}
+[8.327671] (rover_navigation) StdoutLine: {'line': b'Installing obstacle_detection script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation\n'}
+[8.330495] (rover_navigation) StdoutLine: {'line': b'Installing odometry_node script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation\n'}
+[8.331020] (rover_navigation) StdoutLine: {'line': b'Installing path_executor script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation\n'}
+[8.331228] (rover_navigation) StdoutLine: {'line': b'Installing planner_manager script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation\n'}
+[8.332744] (rover_navigation) StdoutLine: {'line': b'Installing rrt_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation\n'}
+[8.337302] (rover_navigation) StdoutLine: {'line': b"writing list of installed files to '/home/caterpillar/ros2_ws/build/rover_navigation/install.log'\n"}
+[8.390763] (-) TimerEvent: {}
+[8.491392] (-) TimerEvent: {}
+[8.592129] (-) TimerEvent: {}
+[8.623587] (rover_navigation) CommandEnded: {'returncode': 0}
+[8.692354] (-) TimerEvent: {}
+[8.768762] (rover_navigation) JobEnded: {'identifier': 'rover_navigation', 'rc': 0}
+[8.793877] (-) TimerEvent: {}
+[8.895645] (-) TimerEvent: {}
+[8.952622] (bts_motor_controller) StdoutLine: {'line': b'running egg_info\n'}
+[8.995994] (-) TimerEvent: {}
+[9.073952] (bts_motor_controller) StdoutLine: {'line': b'writing ../../build/bts_motor_controller/bts_motor_controller.egg-info/PKG-INFO\n'}
+[9.074343] (bts_motor_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/bts_motor_controller/bts_motor_controller.egg-info/dependency_links.txt\n'}
+[9.098931] (-) TimerEvent: {}
+[9.109483] (bts_motor_controller) StdoutLine: {'line': b'writing entry points to ../../build/bts_motor_controller/bts_motor_controller.egg-info/entry_points.txt\n'}
+[9.112780] (bts_motor_controller) StdoutLine: {'line': b'writing requirements to ../../build/bts_motor_controller/bts_motor_controller.egg-info/requires.txt\n'}
+[9.115611] (bts_motor_controller) StdoutLine: {'line': b'writing top-level names to ../../build/bts_motor_controller/bts_motor_controller.egg-info/top_level.txt\n'}
+[9.199259] (-) TimerEvent: {}
+[9.299868] (-) TimerEvent: {}
+[9.357383] (bts_motor_controller) StdoutLine: {'line': b"reading manifest file '../../build/bts_motor_controller/bts_motor_controller.egg-info/SOURCES.txt'\n"}
+[9.361954] (bts_motor_controller) StdoutLine: {'line': b"writing manifest file '../../build/bts_motor_controller/bts_motor_controller.egg-info/SOURCES.txt'\n"}
+[9.365004] (bts_motor_controller) StdoutLine: {'line': b'running build\n'}
+[9.365265] (bts_motor_controller) StdoutLine: {'line': b'running build_py\n'}
+[9.365452] (bts_motor_controller) StdoutLine: {'line': b'creating /home/caterpillar/ros2_ws/build/bts_motor_controller/build\n'}
+[9.365660] (bts_motor_controller) StdoutLine: {'line': b'creating /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib\n'}
+[9.365922] (bts_motor_controller) StdoutLine: {'line': b'creating /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib/bts_motor_controller\n'}
+[9.366120] (bts_motor_controller) StdoutLine: {'line': b'copying bts_motor_controller/__init__.py -> /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib/bts_motor_controller\n'}
+[9.366331] (bts_motor_controller) StdoutLine: {'line': b'copying bts_motor_controller/motor_node.py -> /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib/bts_motor_controller\n'}
+[9.366528] (bts_motor_controller) StdoutLine: {'line': b'running install\n'}
+[9.379392] (bts_motor_controller) StdoutLine: {'line': b'running install_lib\n'}
+[9.399960] (-) TimerEvent: {}
+[9.436213] (bts_motor_controller) StdoutLine: {'line': b'creating /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller\n'}
+[9.438450] (bts_motor_controller) StdoutLine: {'line': b'copying /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib/bts_motor_controller/__init__.py -> /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller\n'}
+[9.438911] (bts_motor_controller) StdoutLine: {'line': b'copying /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib/bts_motor_controller/motor_node.py -> /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller\n'}
+[9.439121] (bts_motor_controller) StdoutLine: {'line': b'byte-compiling /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller/__init__.py to __init__.cpython-312.pyc\n'}
+[9.440563] (bts_motor_controller) StdoutLine: {'line': b'byte-compiling /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller/motor_node.py to motor_node.cpython-312.pyc\n'}
+[9.443102] (bts_motor_controller) StdoutLine: {'line': b'running install_data\n'}
+[9.444098] (bts_motor_controller) StdoutLine: {'line': b'copying resource/bts_motor_controller -> /home/caterpillar/ros2_ws/install/bts_motor_controller/share/ament_index/resource_index/packages\n'}
+[9.446137] (bts_motor_controller) StdoutLine: {'line': b'copying package.xml -> /home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller\n'}
+[9.446299] (bts_motor_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[9.460670] (rplidar_ros) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:36\x1b[m\x1b[K:\n'}
+[9.461326] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:50:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K"M_PI" redefined\n'}
+[9.461487] (rplidar_ros) StderrLine: {'line': b'   50 | #define M_PI 3.1415926535897932384626433832795\n'}
+[9.461606] (rplidar_ros) StderrLine: {'line': b'      | \n'}
+[9.461761] (rplidar_ros) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/13/cmath:47\x1b[m\x1b[K,\n'}
+[9.461893] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:18\x1b[m\x1b[K,\n'}
+[9.462005] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:24\x1b[m\x1b[K,\n'}
+[9.462116] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[9.462230] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[9.462342] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[9.462447] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[9.462556] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[9.462659] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22\x1b[m\x1b[K,\n'}
+[9.462811] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38\x1b[m\x1b[K,\n'}
+[9.462931] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[9.463095] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[9.463222] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172\x1b[m\x1b[K,\n'}
+[9.463332] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:34\x1b[m\x1b[K:\n'}
+[9.463451] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/math.h:1152:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kthis is the location of the previous definition\n'}
+[9.463573] (rplidar_ros) StderrLine: {'line': b' 1152 | # define M_PI           3.14159265358979323846  /* pi */\n'}
+[9.463764] (rplidar_ros) StderrLine: {'line': b'      | \n'}
+[9.498539] (bts_motor_controller) StdoutLine: {'line': b'Copying ../../build/bts_motor_controller/bts_motor_controller.egg-info to /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller-0.0.0-py3.12.egg-info\n'}
+[9.504566] (-) TimerEvent: {}
+[9.506914] (bts_motor_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[9.604972] (-) TimerEvent: {}
+[9.705582] (-) TimerEvent: {}
+[9.806220] (-) TimerEvent: {}
+[9.906785] (bts_motor_controller) StdoutLine: {'line': b'Installing motor_node script to /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/bts_motor_controller\n'}
+[9.907388] (-) TimerEvent: {}
+[9.912192] (bts_motor_controller) StdoutLine: {'line': b"writing list of installed files to '/home/caterpillar/ros2_ws/build/bts_motor_controller/install.log'\n"}
+[10.007592] (-) TimerEvent: {}
+[10.109631] (bts_motor_controller) CommandEnded: {'returncode': 0}
+[10.110998] (-) TimerEvent: {}
+[10.142948] (bts_motor_controller) JobEnded: {'identifier': 'bts_motor_controller', 'rc': 0}
+[10.212844] (-) TimerEvent: {}
+[10.313531] (-) TimerEvent: {}
+[10.415497] (-) TimerEvent: {}
+[10.516026] (-) TimerEvent: {}
+[10.616595] (-) TimerEvent: {}
+[10.717067] (-) TimerEvent: {}
+[10.817518] (-) TimerEvent: {}
+[10.917944] (-) TimerEvent: {}
+[11.018408] (-) TimerEvent: {}
+[11.118903] (-) TimerEvent: {}
+[11.219338] (-) TimerEvent: {}
+[11.319860] (-) TimerEvent: {}
+[11.420380] (-) TimerEvent: {}
+[11.520923] (-) TimerEvent: {}
+[11.621377] (-) TimerEvent: {}
+[11.721830] (-) TimerEvent: {}
+[11.822269] (-) TimerEvent: {}
+[11.922721] (-) TimerEvent: {}
+[12.023225] (-) TimerEvent: {}
+[12.123766] (-) TimerEvent: {}
+[12.224317] (-) TimerEvent: {}
+[12.324766] (-) TimerEvent: {}
+[12.426802] (-) TimerEvent: {}
+[12.530172] (-) TimerEvent: {}
+[12.630735] (-) TimerEvent: {}
+[12.731312] (-) TimerEvent: {}
+[12.831755] (-) TimerEvent: {}
+[12.932171] (-) TimerEvent: {}
+[13.032712] (-) TimerEvent: {}
+[13.134893] (-) TimerEvent: {}
+[13.235438] (-) TimerEvent: {}
+[13.339807] (-) TimerEvent: {}
+[13.440386] (-) TimerEvent: {}
+[13.541051] (-) TimerEvent: {}
+[13.644125] (-) TimerEvent: {}
+[13.746195] (-) TimerEvent: {}
+[13.847954] (-) TimerEvent: {}
+[13.948481] (-) TimerEvent: {}
+[14.049652] (-) TimerEvent: {}
+[14.150475] (-) TimerEvent: {}
+[14.250993] (-) TimerEvent: {}
+[14.351453] (-) TimerEvent: {}
+[14.451915] (-) TimerEvent: {}
+[14.552345] (-) TimerEvent: {}
+[14.652900] (-) TimerEvent: {}
+[14.753498] (-) TimerEvent: {}
+[14.772744] (rplidar_ros) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:39\x1b[m\x1b[K,\n'}
+[14.774739] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:41\x1b[m\x1b[K:\n'}
+[14.775096] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_protocol.h:59:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ forbids zero-size array \xe2\x80\x98\x1b[01m\x1b[Kdata\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic\x07-Wpedantic\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.775286] (rplidar_ros) StderrLine: {'line': b'   59 |     _u8 data[\x1b[01;35m\x1b[K0\x1b[m\x1b[K];\n'}
+[14.775434] (rplidar_ros) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[14.775556] (rplidar_ros) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:40\x1b[m\x1b[K:\n'}
+[14.775700] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_cmd.h:260:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ forbids zero-size array \xe2\x80\x98\x1b[01m\x1b[Kpayload\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic\x07-Wpedantic\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.775833] (rplidar_ros) StderrLine: {'line': b'  260 |     _u8  payload[\x1b[01;35m\x1b[K0\x1b[m\x1b[K];\n'}
+[14.775938] (rplidar_ros) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[14.853625] (-) TimerEvent: {}
+[14.898898] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid rplidar_ros::rplidar_node::\x1b[01;32m\x1b[Kstop_motor\x1b[m\x1b[K({anonymous}::EmptyRequest, {anonymous}::EmptyResponse)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[14.900201] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:246:50:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kreq\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.900524] (rplidar_ros) StderrLine: {'line': b'  246 | void rplidar_node::stop_motor(\x1b[01;35m\x1b[Kconst EmptyRequest req\x1b[m\x1b[K, EmptyResponse res)\n'}
+[14.900654] (rplidar_ros) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[14.900810] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:246:69:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kres\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.900949] (rplidar_ros) StderrLine: {'line': b'  246 | void rplidar_node::stop_motor(const EmptyRequest req, \x1b[01;35m\x1b[KEmptyResponse res\x1b[m\x1b[K)\n'}
+[14.901057] (rplidar_ros) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[14.901160] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid rplidar_ros::rplidar_node::\x1b[01;32m\x1b[Kstart_motor\x1b[m\x1b[K({anonymous}::EmptyRequest, {anonymous}::EmptyResponse)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[14.901265] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:259:51:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kreq\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.901373] (rplidar_ros) StderrLine: {'line': b'  259 | void rplidar_node::start_motor(\x1b[01;35m\x1b[Kconst EmptyRequest req\x1b[m\x1b[K, EmptyResponse res)\n'}
+[14.901478] (rplidar_ros) StderrLine: {'line': b'      |                                \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[14.901582] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:259:70:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kres\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.901697] (rplidar_ros) StderrLine: {'line': b'  259 | void rplidar_node::start_motor(const EmptyRequest req, \x1b[01;35m\x1b[KEmptyResponse res\x1b[m\x1b[K)\n'}
+[14.901819] (rplidar_ros) StderrLine: {'line': b'      |                                                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[14.916043] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid rplidar_ros::rplidar_node::\x1b[01;32m\x1b[Kpublish_loop\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[14.917525] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:386:25:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.917992] (rplidar_ros) StderrLine: {'line': b'  386 |           for (j = 0; \x1b[01;35m\x1b[Kj < m_angle_compensate_multiple\x1b[m\x1b[K; j++) {\n'}
+[14.918232] (rplidar_ros) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[14.918403] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:407:44:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.920388] (rplidar_ros) StderrLine: {'line': b'  407 |       for (size_t x = start_node, y = 0; \x1b[01;35m\x1b[Kx < end_node\x1b[m\x1b[K; ++x, ++y) {\n'}
+[14.920633] (rplidar_ros) StderrLine: {'line': b'      |                                          \x1b[01;35m\x1b[K~~^~~~~~~~~~\x1b[m\x1b[K\n'}
+[14.921807] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:414:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kangle_min\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.922033] (rplidar_ros) StderrLine: {'line': b'  414 |     float \x1b[01;35m\x1b[Kangle_min\x1b[m\x1b[K = deg_2_rad(0.0f);\n'}
+[14.922193] (rplidar_ros) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[14.922338] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:415:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kangle_max\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.922486] (rplidar_ros) StderrLine: {'line': b'  415 |     float \x1b[01;35m\x1b[Kangle_max\x1b[m\x1b[K = deg_2_rad(359.0f);\n'}
+[14.922611] (rplidar_ros) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[14.953771] (-) TimerEvent: {}
+[15.054657] (-) TimerEvent: {}
+[15.155351] (-) TimerEvent: {}
+[15.255883] (-) TimerEvent: {}
+[15.357162] (-) TimerEvent: {}
+[15.458630] (-) TimerEvent: {}
+[15.559142] (-) TimerEvent: {}
+[15.661115] (-) TimerEvent: {}
+[15.765968] (-) TimerEvent: {}
+[15.867113] (-) TimerEvent: {}
+[15.971794] (-) TimerEvent: {}
+[16.072333] (-) TimerEvent: {}
+[16.173047] (-) TimerEvent: {}
+[16.274538] (-) TimerEvent: {}
+[16.379708] (-) TimerEvent: {}
+[16.484154] (-) TimerEvent: {}
+[16.585131] (-) TimerEvent: {}
+[16.685553] (-) TimerEvent: {}
+[16.785971] (-) TimerEvent: {}
+[16.888777] (-) TimerEvent: {}
+[16.989463] (-) TimerEvent: {}
+[17.090161] (-) TimerEvent: {}
+[17.191822] (-) TimerEvent: {}
+[17.292445] (-) TimerEvent: {}
+[17.393097] (-) TimerEvent: {}
+[17.493736] (-) TimerEvent: {}
+[17.594380] (-) TimerEvent: {}
+[17.694874] (-) TimerEvent: {}
+[17.795414] (-) TimerEvent: {}
+[17.895923] (-) TimerEvent: {}
+[17.996324] (-) TimerEvent: {}
+[18.096800] (-) TimerEvent: {}
+[18.197411] (-) TimerEvent: {}
+[18.298157] (-) TimerEvent: {}
+[18.398857] (-) TimerEvent: {}
+[18.499540] (-) TimerEvent: {}
+[18.600008] (-) TimerEvent: {}
+[18.700449] (-) TimerEvent: {}
+[18.801044] (-) TimerEvent: {}
+[18.901527] (-) TimerEvent: {}
+[19.002290] (-) TimerEvent: {}
+[19.103874] (-) TimerEvent: {}
+[19.204707] (-) TimerEvent: {}
+[19.305175] (-) TimerEvent: {}
+[19.405646] (-) TimerEvent: {}
+[19.506177] (-) TimerEvent: {}
+[19.606992] (-) TimerEvent: {}
+[19.707453] (-) TimerEvent: {}
+[19.808669] (-) TimerEvent: {}
+[19.910317] (-) TimerEvent: {}
+[20.011411] (-) TimerEvent: {}
+[20.112122] (-) TimerEvent: {}
+[20.212967] (-) TimerEvent: {}
+[20.313604] (-) TimerEvent: {}
+[20.414250] (-) TimerEvent: {}
+[20.515055] (-) TimerEvent: {}
+[20.615500] (-) TimerEvent: {}
+[20.715947] (-) TimerEvent: {}
+[20.816396] (-) TimerEvent: {}
+[20.916883] (-) TimerEvent: {}
+[21.017493] (-) TimerEvent: {}
+[21.117963] (-) TimerEvent: {}
+[21.218378] (-) TimerEvent: {}
+[21.318878] (-) TimerEvent: {}
+[21.419999] (-) TimerEvent: {}
+[21.520454] (-) TimerEvent: {}
+[21.620929] (-) TimerEvent: {}
+[21.721405] (-) TimerEvent: {}
+[21.822173] (-) TimerEvent: {}
+[21.922727] (-) TimerEvent: {}
+[22.023204] (-) TimerEvent: {}
+[22.123923] (-) TimerEvent: {}
+[22.224360] (-) TimerEvent: {}
+[22.324855] (-) TimerEvent: {}
+[22.425495] (-) TimerEvent: {}
+[22.525969] (-) TimerEvent: {}
+[22.626595] (-) TimerEvent: {}
+[22.727227] (-) TimerEvent: {}
+[22.828035] (-) TimerEvent: {}
+[22.928651] (-) TimerEvent: {}
+[23.032183] (-) TimerEvent: {}
+[23.133923] (-) TimerEvent: {}
+[23.236060] (-) TimerEvent: {}
+[23.338918] (-) TimerEvent: {}
+[23.439941] (-) TimerEvent: {}
+[23.540736] (-) TimerEvent: {}
+[23.641503] (-) TimerEvent: {}
+[23.742402] (-) TimerEvent: {}
+[23.843067] (-) TimerEvent: {}
+[23.907962] (rplidar_ros) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking CXX shared library librplidar_composition_node.so\x1b[0m\n'}
+[23.943211] (-) TimerEvent: {}
+[24.043772] (-) TimerEvent: {}
+[24.146899] (-) TimerEvent: {}
+[24.247734] (-) TimerEvent: {}
+[24.348472] (-) TimerEvent: {}
+[24.452823] (-) TimerEvent: {}
+[24.553626] (-) TimerEvent: {}
+[24.657064] (-) TimerEvent: {}
+[24.759447] (-) TimerEvent: {}
+[24.860556] (-) TimerEvent: {}
+[24.962173] (-) TimerEvent: {}
+[25.063497] (-) TimerEvent: {}
+[25.166760] (-) TimerEvent: {}
+[25.267436] (-) TimerEvent: {}
+[25.368815] (-) TimerEvent: {}
+[25.469403] (-) TimerEvent: {}
+[25.570054] (-) TimerEvent: {}
+[25.595548] (rplidar_ros) StdoutLine: {'line': b'[ 77%] Built target rplidar_composition_node\n'}
+[25.670217] (-) TimerEvent: {}
+[25.675769] (rplidar_ros) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/rplidar_composition.dir/src/standalone_rplidar.cpp.o\x1b[0m\n'}
+[25.774944] (-) TimerEvent: {}
+[25.875518] (-) TimerEvent: {}
+[25.975964] (-) TimerEvent: {}
+[26.077802] (-) TimerEvent: {}
+[26.178253] (-) TimerEvent: {}
+[26.282790] (-) TimerEvent: {}
+[26.308824] (rplidar_ros) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/standalone_rplidar.cpp:16\x1b[m\x1b[K:\n'}
+[26.309444] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:50:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K"M_PI" redefined\n'}
+[26.309734] (rplidar_ros) StderrLine: {'line': b'   50 | #define M_PI 3.1415926535897932384626433832795\n'}
+[26.310032] (rplidar_ros) StderrLine: {'line': b'      | \n'}
+[26.310201] (rplidar_ros) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/13/cmath:47\x1b[m\x1b[K,\n'}
+[26.310361] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:18\x1b[m\x1b[K,\n'}
+[26.310537] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:24\x1b[m\x1b[K,\n'}
+[26.310714] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[26.310893] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[26.311043] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[26.311178] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[26.311373] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[26.311612] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22\x1b[m\x1b[K,\n'}
+[26.324582] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38\x1b[m\x1b[K,\n'}
+[26.324885] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[26.327549] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[26.327778] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172\x1b[m\x1b[K,\n'}
+[26.327924] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:34\x1b[m\x1b[K:\n'}
+[26.328051] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/math.h:1152:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kthis is the location of the previous definition\n'}
+[26.328180] (rplidar_ros) StderrLine: {'line': b' 1152 | # define M_PI           3.14159265358979323846  /* pi */\n'}
+[26.328301] (rplidar_ros) StderrLine: {'line': b'      | \n'}
+[26.388240] (-) TimerEvent: {}
+[26.494300] (-) TimerEvent: {}
+[26.597024] (-) TimerEvent: {}
+[26.698274] (-) TimerEvent: {}
+[26.800391] (-) TimerEvent: {}
+[26.901527] (-) TimerEvent: {}
+[27.002180] (-) TimerEvent: {}
+[27.105661] (-) TimerEvent: {}
+[27.207595] (-) TimerEvent: {}
+[27.309572] (-) TimerEvent: {}
+[27.410292] (-) TimerEvent: {}
+[27.511597] (-) TimerEvent: {}
+[27.615201] (-) TimerEvent: {}
+[27.716250] (-) TimerEvent: {}
+[27.817477] (-) TimerEvent: {}
+[27.920561] (-) TimerEvent: {}
+[28.022911] (-) TimerEvent: {}
+[28.126471] (-) TimerEvent: {}
+[28.228551] (-) TimerEvent: {}
+[28.330412] (-) TimerEvent: {}
+[28.431499] (-) TimerEvent: {}
+[28.533833] (-) TimerEvent: {}
+[28.635718] (-) TimerEvent: {}
+[28.736363] (-) TimerEvent: {}
+[28.837195] (-) TimerEvent: {}
+[28.941253] (-) TimerEvent: {}
+[29.042084] (-) TimerEvent: {}
+[29.142623] (-) TimerEvent: {}
+[29.246004] (-) TimerEvent: {}
+[29.355092] (-) TimerEvent: {}
+[29.455648] (-) TimerEvent: {}
+[29.559010] (-) TimerEvent: {}
+[29.662003] (-) TimerEvent: {}
+[29.762479] (-) TimerEvent: {}
+[29.862968] (-) TimerEvent: {}
+[29.965853] (-) TimerEvent: {}
+[30.067733] (-) TimerEvent: {}
+[30.172302] (-) TimerEvent: {}
+[30.274741] (-) TimerEvent: {}
+[30.375704] (-) TimerEvent: {}
+[30.478210] (-) TimerEvent: {}
+[30.578869] (-) TimerEvent: {}
+[30.680116] (-) TimerEvent: {}
+[30.781415] (-) TimerEvent: {}
+[30.882257] (-) TimerEvent: {}
+[30.986035] (-) TimerEvent: {}
+[31.233746] (-) TimerEvent: {}
+[31.336755] (-) TimerEvent: {}
+[31.437961] (-) TimerEvent: {}
+[31.538448] (-) TimerEvent: {}
+[31.641482] (-) TimerEvent: {}
+[31.742717] (-) TimerEvent: {}
+[31.843229] (-) TimerEvent: {}
+[31.943999] (-) TimerEvent: {}
+[32.044705] (-) TimerEvent: {}
+[32.145492] (-) TimerEvent: {}
+[32.245995] (-) TimerEvent: {}
+[32.346412] (-) TimerEvent: {}
+[32.446910] (-) TimerEvent: {}
+[32.547711] (-) TimerEvent: {}
+[32.648614] (-) TimerEvent: {}
+[32.749296] (-) TimerEvent: {}
+[32.849949] (-) TimerEvent: {}
+[32.950567] (-) TimerEvent: {}
+[33.051210] (-) TimerEvent: {}
+[33.151763] (-) TimerEvent: {}
+[33.252337] (-) TimerEvent: {}
+[33.352900] (-) TimerEvent: {}
+[33.375877] (rplidar_ros) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:39\x1b[m\x1b[K,\n'}
+[33.377343] (rplidar_ros) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:41\x1b[m\x1b[K:\n'}
+[33.377760] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_protocol.h:59:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ forbids zero-size array \xe2\x80\x98\x1b[01m\x1b[Kdata\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic\x07-Wpedantic\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[33.377964] (rplidar_ros) StderrLine: {'line': b'   59 |     _u8 data[\x1b[01;35m\x1b[K0\x1b[m\x1b[K];\n'}
+[33.378118] (rplidar_ros) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[33.378242] (rplidar_ros) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:40\x1b[m\x1b[K:\n'}
+[33.378388] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_cmd.h:260:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ forbids zero-size array \xe2\x80\x98\x1b[01m\x1b[Kpayload\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic\x07-Wpedantic\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[33.378523] (rplidar_ros) StderrLine: {'line': b'  260 |     _u8  payload[\x1b[01;35m\x1b[K0\x1b[m\x1b[K];\n'}
+[33.378639] (rplidar_ros) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[33.453024] (-) TimerEvent: {}
+[33.553480] (-) TimerEvent: {}
+[33.653980] (-) TimerEvent: {}
+[33.754435] (-) TimerEvent: {}
+[33.854974] (-) TimerEvent: {}
+[33.955425] (-) TimerEvent: {}
+[34.055951] (-) TimerEvent: {}
+[34.156991] (-) TimerEvent: {}
+[34.257773] (-) TimerEvent: {}
+[34.358226] (-) TimerEvent: {}
+[34.458712] (-) TimerEvent: {}
+[34.559412] (-) TimerEvent: {}
+[34.659947] (-) TimerEvent: {}
+[34.760694] (-) TimerEvent: {}
+[34.849665] (rplidar_ros) StderrLine: {'line': b'\x1b[01m\x1b[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:76:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfloat rplidar_ros::\x1b[01;32m\x1b[KgetAngle\x1b[m\x1b[K(const rplidar_response_measurement_node_hq_t&)\x1b[m\x1b[K\xe2\x80\x99 defined but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function\x07-Wunused-function\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[34.850295] (rplidar_ros) StderrLine: {'line': b'   76 | static float \x1b[01;35m\x1b[KgetAngle\x1b[m\x1b[K(const rplidar_response_measurement_node_hq_t & node)\n'}
+[34.850475] (rplidar_ros) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[34.860819] (-) TimerEvent: {}
+[34.961488] (-) TimerEvent: {}
+[35.062672] (-) TimerEvent: {}
+[35.135768] (rplidar_ros) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable rplidar_composition\x1b[0m\n'}
+[35.162760] (-) TimerEvent: {}
+[35.263326] (-) TimerEvent: {}
+[35.364755] (-) TimerEvent: {}
+[35.467547] (-) TimerEvent: {}
+[35.570031] (-) TimerEvent: {}
+[35.672622] (-) TimerEvent: {}
+[35.773622] (-) TimerEvent: {}
+[35.874064] (-) TimerEvent: {}
+[35.956379] (rplidar_ros) StdoutLine: {'line': b'[100%] Built target rplidar_composition\n'}
+[35.974139] (-) TimerEvent: {}
+[35.988661] (rplidar_ros) CommandEnded: {'returncode': 0}
+[35.990000] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'install'}
+[36.015534] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/caterpillar/ros2_ws/build/rplidar_ros'], 'cwd': '/home/caterpillar/ros2_ws/build/rplidar_ros', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'caterpillar', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/cursor/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/caterpillar', 'CHROME_DESKTOP': 'cursor.desktop', 'TERM_PROGRAM_VERSION': '2.2.44', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/cursor.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/cursor/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/cursor/cursor', 'MANAGERPID': '1906', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2152', 'BUNDLED_DEBUGPY_PATH': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2999', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'caterpillar', 'JOURNAL_STREAM': '8:16149', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'caterpillar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/caterpillar-desktop:@/tmp/.ICE-unix/2126,unix/caterpillar-desktop:/tmp/.ICE-unix/2126', 'INVOCATION_ID': '0400bf9b0c8d4fd79e90ee71bbfd76c6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-554ddbc6fab74a1c.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.4HTZH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d4e02dc763.sock', 'TERM_PROGRAM': 'vscode', 'CURSOR_TRACE_ID': 'f6847b3d43bc488584ef1e172d53c0ec', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_IPC_AUTH_TOKEN': '37cdce435a9ada4fbd4def0da45104b492bfbce3ee50e140d07c64d7c758e7d5', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/caterpillar/ros2_ws/build/rplidar_ros', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[36.035434] (rplidar_ros) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[36.036311] (rplidar_ros) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[36.036930] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition\n'}
+[36.037607] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar.launch.py\n'}
+[36.038268] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch.py\n'}
+[36.038926] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch.py\n'}
+[36.039463] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch.py\n'}
+[36.039618] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch.py\n'}
+[36.039750] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar.launch.py\n'}
+[36.039866] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch.py\n'}
+[36.040036] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch.py\n'}
+[36.040195] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch.py\n'}
+[36.040304] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz\n'}
+[36.040404] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/librplidar_composition_node.so\n'}
+[36.040504] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/include/rplidar_node.hpp\n'}
+[36.040663] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/include/visibility.h\n'}
+[36.040787] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition\n'}
+[36.040941] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros\n'}
+[36.041095] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros\n'}
+[36.041282] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh\n'}
+[36.041483] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv\n'}
+[36.041708] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh\n'}
+[36.041940] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv\n'}
+[36.042162] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash\n'}
+[36.042352] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh\n'}
+[36.042571] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh\n'}
+[36.042820] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv\n'}
+[36.043136] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.dsv\n'}
+[36.065588] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros\n'}
+[36.066089] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/rclcpp_components/rplidar_ros\n'}
+[36.067383] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[36.068219] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[36.068406] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake\n'}
+[36.068558] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake\n'}
+[36.068705] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.xml\n'}
+[36.071417] (rplidar_ros) CommandEnded: {'returncode': 0}
+[36.074408] (-) TimerEvent: {}
+[36.116706] (rplidar_ros) JobEnded: {'identifier': 'rplidar_ros', 'rc': 0}
+[36.120489] (your_robot_bringup) JobStarted: {'identifier': 'your_robot_bringup'}
+[36.175881] (-) TimerEvent: {}
+[36.276350] (-) TimerEvent: {}
+[36.376811] (-) TimerEvent: {}
+[36.478969] (-) TimerEvent: {}
+[36.581489] (-) TimerEvent: {}
+[36.682063] (-) TimerEvent: {}
+[36.782501] (-) TimerEvent: {}
+[36.885630] (-) TimerEvent: {}
+[36.987283] (-) TimerEvent: {}
+[37.089926] (-) TimerEvent: {}
+[37.193332] (-) TimerEvent: {}
+[37.293749] (-) TimerEvent: {}
+[37.394328] (-) TimerEvent: {}
+[37.495013] (-) TimerEvent: {}
+[37.595344] (-) TimerEvent: {}
+[37.695706] (-) TimerEvent: {}
+[37.796293] (-) TimerEvent: {}
+[37.898704] (-) TimerEvent: {}
+[37.999571] (-) TimerEvent: {}
+[38.100175] (-) TimerEvent: {}
+[38.200644] (-) TimerEvent: {}
+[38.301022] (-) TimerEvent: {}
+[38.401503] (-) TimerEvent: {}
+[38.502060] (-) TimerEvent: {}
+[38.554032] (your_robot_bringup) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/your_robot_bringup', 'build', '--build-base', '/home/caterpillar/ros2_ws/build/your_robot_bringup/build', 'install', '--record', '/home/caterpillar/ros2_ws/build/your_robot_bringup/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/caterpillar/ros2_ws/src/your_robot_bringup', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'caterpillar', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/cursor/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/caterpillar/ros2_ws/install/rplidar_ros/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/caterpillar', 'CHROME_DESKTOP': 'cursor.desktop', 'TERM_PROGRAM_VERSION': '2.2.44', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/cursor.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/cursor/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/cursor/cursor', 'MANAGERPID': '1906', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2152', 'BUNDLED_DEBUGPY_PATH': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2999', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'caterpillar', 'JOURNAL_STREAM': '8:16149', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'caterpillar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/caterpillar-desktop:@/tmp/.ICE-unix/2126,unix/caterpillar-desktop:/tmp/.ICE-unix/2126', 'INVOCATION_ID': '0400bf9b0c8d4fd79e90ee71bbfd76c6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/caterpillar/.cursor/extensions/ms-python.debugpy-2025.18.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-554ddbc6fab74a1c.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.4HTZH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d4e02dc763.sock', 'TERM_PROGRAM': 'vscode', 'CURSOR_TRACE_ID': 'f6847b3d43bc488584ef1e172d53c0ec', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/caterpillar/ros2_ws/install/rplidar_ros:/home/caterpillar/ros2_ws/install/bts_motor_controller:/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_IPC_AUTH_TOKEN': '37cdce435a9ada4fbd4def0da45104b492bfbce3ee50e140d07c64d7c758e7d5', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/caterpillar/ros2_ws/build/your_robot_bringup', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/caterpillar/ros2_ws/build/your_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/home/caterpillar/ros2_ws/install/rplidar_ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[38.602182] (-) TimerEvent: {}
+[38.702946] (-) TimerEvent: {}
+[38.803385] (-) TimerEvent: {}
+[38.904452] (-) TimerEvent: {}
+[39.005035] (-) TimerEvent: {}
+[39.105645] (-) TimerEvent: {}
+[39.193715] (your_robot_bringup) StdoutLine: {'line': b'running egg_info\n'}
+[39.194529] (your_robot_bringup) StdoutLine: {'line': b'creating ../../build/your_robot_bringup/your_robot_bringup.egg-info\n'}
+[39.205747] (-) TimerEvent: {}
+[39.234549] (your_robot_bringup) StdoutLine: {'line': b'writing ../../build/your_robot_bringup/your_robot_bringup.egg-info/PKG-INFO\n'}
+[39.236669] (your_robot_bringup) StdoutLine: {'line': b'writing dependency_links to ../../build/your_robot_bringup/your_robot_bringup.egg-info/dependency_links.txt\n'}
+[39.237014] (your_robot_bringup) StdoutLine: {'line': b'writing entry points to ../../build/your_robot_bringup/your_robot_bringup.egg-info/entry_points.txt\n'}
+[39.237162] (your_robot_bringup) StdoutLine: {'line': b'writing requirements to ../../build/your_robot_bringup/your_robot_bringup.egg-info/requires.txt\n'}
+[39.237285] (your_robot_bringup) StdoutLine: {'line': b'writing top-level names to ../../build/your_robot_bringup/your_robot_bringup.egg-info/top_level.txt\n'}
+[39.240382] (your_robot_bringup) StdoutLine: {'line': b"writing manifest file '../../build/your_robot_bringup/your_robot_bringup.egg-info/SOURCES.txt'\n"}
+[39.305836] (-) TimerEvent: {}
+[39.328214] (your_robot_bringup) StdoutLine: {'line': b"reading manifest file '../../build/your_robot_bringup/your_robot_bringup.egg-info/SOURCES.txt'\n"}
+[39.329785] (your_robot_bringup) StdoutLine: {'line': b"writing manifest file '../../build/your_robot_bringup/your_robot_bringup.egg-info/SOURCES.txt'\n"}
+[39.330311] (your_robot_bringup) StdoutLine: {'line': b'running build\n'}
+[39.330518] (your_robot_bringup) StdoutLine: {'line': b'running build_py\n'}
+[39.330759] (your_robot_bringup) StdoutLine: {'line': b'creating /home/caterpillar/ros2_ws/build/your_robot_bringup/build\n'}
+[39.331023] (your_robot_bringup) StdoutLine: {'line': b'creating /home/caterpillar/ros2_ws/build/your_robot_bringup/build/lib\n'}
+[39.331271] (your_robot_bringup) StdoutLine: {'line': b'creating /home/caterpillar/ros2_ws/build/your_robot_bringup/build/lib/your_robot_bringup\n'}
+[39.331523] (your_robot_bringup) StdoutLine: {'line': b'copying src/your_robot_bringup/wheel_odom.py -> /home/caterpillar/ros2_ws/build/your_robot_bringup/build/lib/your_robot_bringup\n'}
+[39.331754] (your_robot_bringup) StdoutLine: {'line': b'copying src/your_robot_bringup/__init__.py -> /home/caterpillar/ros2_ws/build/your_robot_bringup/build/lib/your_robot_bringup\n'}
+[39.331989] (your_robot_bringup) StdoutLine: {'line': b'copying src/your_robot_bringup/rrt_autonomous.py -> /home/caterpillar/ros2_ws/build/your_robot_bringup/build/lib/your_robot_bringup\n'}
+[39.332422] (your_robot_bringup) StdoutLine: {'line': b'running install\n'}
+[39.343590] (your_robot_bringup) StdoutLine: {'line': b'running install_lib\n'}
+[39.386942] (your_robot_bringup) StdoutLine: {'line': b'creating /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your_robot_bringup\n'}
+[39.388695] (your_robot_bringup) StdoutLine: {'line': b'copying /home/caterpillar/ros2_ws/build/your_robot_bringup/build/lib/your_robot_bringup/wheel_odom.py -> /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your_robot_bringup\n'}
+[39.388960] (your_robot_bringup) StdoutLine: {'line': b'copying /home/caterpillar/ros2_ws/build/your_robot_bringup/build/lib/your_robot_bringup/__init__.py -> /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your_robot_bringup\n'}
+[39.389087] (your_robot_bringup) StdoutLine: {'line': b'copying /home/caterpillar/ros2_ws/build/your_robot_bringup/build/lib/your_robot_bringup/rrt_autonomous.py -> /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your_robot_bringup\n'}
+[39.389202] (your_robot_bringup) StdoutLine: {'line': b'byte-compiling /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your_robot_bringup/wheel_odom.py to wheel_odom.cpython-312.pyc\n'}
+[39.390785] (your_robot_bringup) StdoutLine: {'line': b'byte-compiling /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your_robot_bringup/__init__.py to __init__.cpython-312.pyc\n'}
+[39.391046] (your_robot_bringup) StdoutLine: {'line': b'byte-compiling /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your_robot_bringup/rrt_autonomous.py to rrt_autonomous.cpython-312.pyc\n'}
+[39.393724] (your_robot_bringup) StdoutLine: {'line': b'running install_data\n'}
+[39.394141] (your_robot_bringup) StdoutLine: {'line': b'running install_egg_info\n'}
+[39.405935] (-) TimerEvent: {}
+[39.435359] (your_robot_bringup) StdoutLine: {'line': b'Copying ../../build/your_robot_bringup/your_robot_bringup.egg-info to /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your_robot_bringup-0.0.0-py3.12.egg-info\n'}
+[39.437826] (your_robot_bringup) StdoutLine: {'line': b'running install_scripts\n'}
+[39.506032] (-) TimerEvent: {}
+[39.606748] (-) TimerEvent: {}
+[39.707224] (-) TimerEvent: {}
+[39.736832] (your_robot_bringup) StdoutLine: {'line': b'Installing rrt_autonomous script to /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/your_robot_bringup\n'}
+[39.737806] (your_robot_bringup) StdoutLine: {'line': b'Installing wheel_odom script to /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/your_robot_bringup\n'}
+[39.743120] (your_robot_bringup) StdoutLine: {'line': b"writing list of installed files to '/home/caterpillar/ros2_ws/build/your_robot_bringup/install.log'\n"}
+[39.807392] (-) TimerEvent: {}
+[39.881737] (your_robot_bringup) CommandEnded: {'returncode': 0}
+[39.893953] (your_robot_bringup) JobEnded: {'identifier': 'your_robot_bringup', 'rc': 0}
+[39.897346] (-) EventReactorShutdown: {}

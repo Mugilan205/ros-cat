@@ -1,0 +1,49 @@
+[2.862s] Invoking command in '/home/caterpillar/ros2_ws/src/rover_navigation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/rover_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_navigation build --build-base /home/caterpillar/ros2_ws/build/rover_navigation/build install --record /home/caterpillar/ros2_ws/build/rover_navigation/install.log --single-version-externally-managed install_data
+[3.364s] running egg_info
+[3.365s] creating ../../build/rover_navigation/rover_navigation.egg-info
+[3.401s] writing ../../build/rover_navigation/rover_navigation.egg-info/PKG-INFO
+[3.402s] writing dependency_links to ../../build/rover_navigation/rover_navigation.egg-info/dependency_links.txt
+[3.402s] writing entry points to ../../build/rover_navigation/rover_navigation.egg-info/entry_points.txt
+[3.402s] writing requirements to ../../build/rover_navigation/rover_navigation.egg-info/requires.txt
+[3.402s] writing top-level names to ../../build/rover_navigation/rover_navigation.egg-info/top_level.txt
+[3.402s] writing manifest file '../../build/rover_navigation/rover_navigation.egg-info/SOURCES.txt'
+[3.479s] reading manifest file '../../build/rover_navigation/rover_navigation.egg-info/SOURCES.txt'
+[3.480s] writing manifest file '../../build/rover_navigation/rover_navigation.egg-info/SOURCES.txt'
+[3.480s] running build
+[3.480s] running build_py
+[3.480s] creating /home/caterpillar/ros2_ws/build/rover_navigation/build
+[3.480s] creating /home/caterpillar/ros2_ws/build/rover_navigation/build/lib
+[3.480s] creating /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.481s] copying rover_navigation/obstacle_detection.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.481s] copying rover_navigation/rrt_planner.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.481s] copying rover_navigation/__init__.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.481s] copying rover_navigation/path_executor.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.481s] running install
+[3.492s] running install_lib
+[3.530s] creating /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.530s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/obstacle_detection.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.530s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/rrt_planner.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.530s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/__init__.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.530s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/path_executor.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.531s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/obstacle_detection.py to obstacle_detection.cpython-312.pyc
+[3.533s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/rrt_planner.py to rrt_planner.cpython-312.pyc
+[3.537s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/__init__.py to __init__.cpython-312.pyc
+[3.538s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/path_executor.py to path_executor.cpython-312.pyc
+[3.546s] running install_data
+[3.547s] creating /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index
+[3.547s] creating /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index/resource_index
+[3.547s] creating /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index/resource_index/packages
+[3.547s] copying resource/rover_navigation -> /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index/resource_index/packages
+[3.547s] copying package.xml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation
+[3.547s] creating /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.547s] copying launch/obstacle_detection.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.548s] copying launch/rrt_planner.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.548s] copying launch/full_navigation.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.548s] running install_egg_info
+[3.596s] Copying ../../build/rover_navigation/rover_navigation.egg-info to /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation-0.0.1-py3.12.egg-info
+[3.597s] running install_scripts
+[3.853s] Installing obstacle_detection script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.853s] Installing path_executor script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.854s] Installing rrt_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.854s] writing list of installed files to '/home/caterpillar/ros2_ws/build/rover_navigation/install.log'
+[3.968s] Invoked command in '/home/caterpillar/ros2_ws/src/rover_navigation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/rover_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_navigation build --build-base /home/caterpillar/ros2_ws/build/rover_navigation/build install --record /home/caterpillar/ros2_ws/build/rover_navigation/install.log --single-version-externally-managed install_data

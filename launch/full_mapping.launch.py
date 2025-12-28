@@ -32,14 +32,20 @@ def generate_launch_description():
              parameters=['/home/caterpillar/ros2_ws/config/ekf.yaml'], output='screen')
     ]))
 
-    # 4) SLAM toolbox after 3.0s
-    ld.add_action(TimerAction(period=3.0, actions=[
-        Node(package='slam_toolbox', executable='sync_slam_toolbox_node', name='slam_toolbox',
+    # 4) Odometry node (for odom → base_link TF)
+    ld.add_action(TimerAction(period=1.0, actions=[
+        Node(package='rover_navigation', executable='odometry_node', name='odometry_node',
+             output='screen')
+    ]))
+
+    # 5) SLAM toolbox after 4.0s (needs transforms to be ready)
+    ld.add_action(TimerAction(period=4.0, actions=[
+        Node(package='slam_toolbox', executable='async_slam_toolbox_node', name='slam_toolbox',
              parameters=['/home/caterpillar/ros2_ws/config/slam_params.yaml'], output='screen')
     ]))
 
-    # 5) RViz after 4.0s
-    ld.add_action(TimerAction(period=4.0, actions=[
+    # 6) RViz after 5.0s
+    ld.add_action(TimerAction(period=5.0, actions=[
         Node(package='rviz2', executable='rviz2', name='rviz2', output='screen')
     ]))
 

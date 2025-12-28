@@ -1,0 +1,151 @@
+[0.803s] Invoking command in '/home/caterpillar/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/caterpillar/ros2_ws/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/caterpillar/ros2_ws/install/rplidar_ros
+[1.537s] -- Found ament_cmake_auto: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_auto/cmake)
+[1.951s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.075s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[2.775s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.806s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.876s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.987s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.283s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.290s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[3.566s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.895s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/rplidar_ros` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[5.009s] -- Configuring done (4.0s)
+[5.319s] -- Generating done (0.2s)
+[5.348s] -- Build files have been written to: /home/caterpillar/ros2_ws/build/rplidar_ros
+[5.435s] Invoked command in '/home/caterpillar/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/caterpillar/ros2_ws/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/caterpillar/ros2_ws/install/rplidar_ros
+[5.436s] Invoking command in '/home/caterpillar/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/caterpillar/ros2_ws/build/rplidar_ros -- -j4 -l4
+[6.154s] [ 11%] [32mBuilding CXX object CMakeFiles/rplidar_composition_node.dir/src/rplidar_node.cpp.o[0m
+[9.434s] In file included from [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:36[m[K:
+[9.434s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:50:[m[K [01;35m[Kwarning: [m[K"M_PI" redefined
+[9.434s]    50 | #define M_PI 3.1415926535897932384626433832795
+[9.434s]       | 
+[9.434s] In file included from [01m[K/usr/include/c++/13/cmath:47[m[K,
+[9.435s]                  from [01m[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:18[m[K,
+[9.435s]                  from [01m[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:24[m[K,
+[9.435s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[9.435s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+[9.435s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[9.435s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[9.435s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[9.435s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22[m[K,
+[9.435s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38[m[K,
+[9.436s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[9.436s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[9.436s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+[9.436s]                  from [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:34[m[K:
+[9.436s] [01m[K/usr/include/math.h:1152:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[9.436s]  1152 | # define M_PI           3.14159265358979323846  /* pi */
+[9.436s]       | 
+[14.747s] In file included from [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[14.748s]                  from [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:41[m[K:
+[14.748s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_protocol.h:59:14:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[14.748s]    59 |     _u8 data[[01;35m[K0[m[K];
+[14.748s]       |              [01;35m[K^[m[K
+[14.748s] In file included from [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[14.748s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_cmd.h:260:18:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[14.748s]   260 |     _u8  payload[[01;35m[K0[m[K];
+[14.749s]       |                  [01;35m[K^[m[K
+[14.872s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:[m[K In member function ‘[01m[Kvoid rplidar_ros::rplidar_node::[01;32m[Kstop_motor[m[K({anonymous}::EmptyRequest, {anonymous}::EmptyResponse)[m[K’:
+[14.873s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:246:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.873s]   246 | void rplidar_node::stop_motor([01;35m[Kconst EmptyRequest req[m[K, EmptyResponse res)
+[14.873s]       |                               [01;35m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[14.873s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:246:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kres[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.874s]   246 | void rplidar_node::stop_motor(const EmptyRequest req, [01;35m[KEmptyResponse res[m[K)
+[14.874s]       |                                                       [01;35m[K~~~~~~~~~~~~~~^~~[m[K
+[14.874s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:[m[K In member function ‘[01m[Kvoid rplidar_ros::rplidar_node::[01;32m[Kstart_motor[m[K({anonymous}::EmptyRequest, {anonymous}::EmptyResponse)[m[K’:
+[14.874s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:259:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.874s]   259 | void rplidar_node::start_motor([01;35m[Kconst EmptyRequest req[m[K, EmptyResponse res)
+[14.874s]       |                                [01;35m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[14.874s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kres[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.874s]   259 | void rplidar_node::start_motor(const EmptyRequest req, [01;35m[KEmptyResponse res[m[K)
+[14.874s]       |                                                        [01;35m[K~~~~~~~~~~~~~~^~~[m[K
+[14.890s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:[m[K In member function ‘[01m[Kvoid rplidar_ros::rplidar_node::[01;32m[Kpublish_loop[m[K()[m[K’:
+[14.890s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:386:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[14.891s]   386 |           for (j = 0; [01;35m[Kj < m_angle_compensate_multiple[m[K; j++) {
+[14.891s]       |                       [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[14.893s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:407:44:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[14.893s]   407 |       for (size_t x = start_node, y = 0; [01;35m[Kx < end_node[m[K; ++x, ++y) {
+[14.894s]       |                                          [01;35m[K~~^~~~~~~~~~[m[K
+[14.895s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:414:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kangle_min[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[14.895s]   414 |     float [01;35m[Kangle_min[m[K = deg_2_rad(0.0f);
+[14.895s]       |           [01;35m[K^~~~~~~~~[m[K
+[14.895s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/rplidar_node.cpp:415:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kangle_max[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[14.895s]   415 |     float [01;35m[Kangle_max[m[K = deg_2_rad(359.0f);
+[14.895s]       |           [01;35m[K^~~~~~~~~[m[K
+[23.881s] [ 22%] [32m[1mLinking CXX shared library librplidar_composition_node.so[0m
+[25.569s] [ 77%] Built target rplidar_composition_node
+[25.649s] [ 88%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/src/standalone_rplidar.cpp.o[0m
+[26.282s] In file included from [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/src/standalone_rplidar.cpp:16[m[K:
+[26.282s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:50:[m[K [01;35m[Kwarning: [m[K"M_PI" redefined
+[26.283s]    50 | #define M_PI 3.1415926535897932384626433832795
+[26.283s]       | 
+[26.283s] In file included from [01m[K/usr/include/c++/13/cmath:47[m[K,
+[26.283s]                  from [01m[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:18[m[K,
+[26.283s]                  from [01m[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:24[m[K,
+[26.283s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[26.284s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+[26.284s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[26.284s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[26.284s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[26.297s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22[m[K,
+[26.297s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38[m[K,
+[26.300s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[26.300s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[26.300s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+[26.301s]                  from [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:34[m[K:
+[26.301s] [01m[K/usr/include/math.h:1152:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[26.301s]  1152 | # define M_PI           3.14159265358979323846  /* pi */
+[26.301s]       | 
+[33.349s] In file included from [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[33.350s]                  from [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:41[m[K:
+[33.350s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_protocol.h:59:14:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[33.351s]    59 |     _u8 data[[01;35m[K0[m[K];
+[33.351s]       |              [01;35m[K^[m[K
+[33.351s] In file included from [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[33.351s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/./sdk/include/rplidar_cmd.h:260:18:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[33.351s]   260 |     _u8  payload[[01;35m[K0[m[K];
+[33.351s]       |                  [01;35m[K^[m[K
+[34.823s] [01m[K/home/caterpillar/ros2_ws/src/rplidar_ros/include/rplidar_node.hpp:76:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Kfloat rplidar_ros::[01;32m[KgetAngle[m[K(const rplidar_response_measurement_node_hq_t&)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[34.823s]    76 | static float [01;35m[KgetAngle[m[K(const rplidar_response_measurement_node_hq_t & node)
+[34.823s]       |              [01;35m[K^~~~~~~~[m[K
+[35.109s] [100%] [32m[1mLinking CXX executable rplidar_composition[0m
+[35.929s] [100%] Built target rplidar_composition
+[35.962s] Invoked command in '/home/caterpillar/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/caterpillar/ros2_ws/build/rplidar_ros -- -j4 -l4
+[35.989s] Invoking command in '/home/caterpillar/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/caterpillar/ros2_ws/build/rplidar_ros
+[36.008s] -- Install configuration: ""
+[36.009s] -- Execute custom install script
+[36.010s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[36.010s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar.launch.py
+[36.011s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch.py
+[36.012s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch.py
+[36.012s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch.py
+[36.012s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch.py
+[36.012s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar.launch.py
+[36.013s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch.py
+[36.013s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch.py
+[36.013s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch.py
+[36.013s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz
+[36.013s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/librplidar_composition_node.so
+[36.013s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/include/rplidar_node.hpp
+[36.013s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/include/visibility.h
+[36.013s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[36.014s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+[36.014s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+[36.014s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+[36.014s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+[36.014s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+[36.015s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+[36.015s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+[36.015s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+[36.015s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+[36.016s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+[36.016s] -- Symlinking: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.dsv
+[36.039s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+[36.039s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/rclcpp_components/rplidar_ros
+[36.041s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[36.041s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[36.041s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+[36.041s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+[36.041s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.xml
+[36.045s] Invoked command in '/home/caterpillar/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/caterpillar/ros2_ws/build/rplidar_ros
