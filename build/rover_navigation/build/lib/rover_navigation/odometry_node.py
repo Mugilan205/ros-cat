@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
 Wheel Encoder Odometry Node
-Publishes position and orientation from wheel encoders to /odom topic.
+Publishes position and orientation from ESP odometry to /odom topic.
 """
 
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import Twist, Quaternion
 from nav_msgs.msg import Odometry
 import math
 
@@ -15,115 +14,97 @@ class OdometryNode(Node):
     def __init__(self):
         super().__init__("odometry_node")
         
-        # Odometry parameters
-        self.declare_parameter("wheel_radius", 0.05)  # 5cm wheels
-        self.declare_parameter("wheel_base", 0.15)    # 15cm distance between wheels
-        self.declare_parameter("encoder_resolution", 20)  # 20 ticks per revolution
+        # ESP odometry input topic
+        self.declare_parameter("esp_odom_topic", "/esp/odom")
+        esp_odom_topic = self.get_parameter("esp_odom_topic").value
         
-        self.wheel_radius = self.get_parameter("wheel_radius").value
-        self.wheel_base = self.get_parameter("wheel_base").value
-        self.encoder_resolution = self.get_parameter("encoder_resolution").value
+        # Store latest ESP odometry data
+        self.latest_esp_odom = None
+        self.esp_odom_received = False
         
-        # Current odometry state
-        self.x = 0.0
-        self.y = 0.0
-        self.theta = 0.0  # heading in radians
-        
-        # Velocity state
-        self.linear_x = 0.0
-        self.angular_z = 0.0
+        # Create subscriber for ESP odometry
+        self.esp_odom_sub = self.create_subscription(
+            Odometry,
+            esp_odom_topic,
+            self.esp_odom_callback,
+            10
+        )
         
         # Create publishers
         self.odom_pub = self.create_publisher(Odometry, "/odom", 10)
         
-        # Subscribe to command velocity to integrate odometry
-        self.cmd_vel_sub = self.create_subscription(
-            Twist, "/cmd_vel", self.cmd_vel_callback, 10
-        )
-        
-        # Timer for publishing odometry
+        # Timer for publishing odometry (same as before: 20Hz)
         self.timer = self.create_timer(0.05, self.publish_odom)  # 20Hz
         
         self.get_logger().info(
             f"Odometry Node Started\n"
-            f"  Wheel Radius: {self.wheel_radius} m\n"
-            f"  Wheel Base: {self.wheel_base} m\n"
-            f"  Encoder Resolution: {self.encoder_resolution} ticks/rev"
+            f"  Subscribing to ESP odometry: {esp_odom_topic}\n"
+            f"  Publishing to: /odom at 20 Hz"
         )
 
-    def cmd_vel_callback(self, msg):
-        """Store current velocity commands for odometry integration."""
-        self.linear_x = msg.linear.x
-        self.angular_z = msg.angular.z
-        
-        # Integrate odometry
-        dt = 0.05  # Assuming 20Hz update rate
-        
-        if abs(self.angular_z) > 0.001:
-            # Curved path
-            radius = self.linear_x / self.angular_z
-            delta_theta = self.angular_z * dt
-            
-            self.x += radius * (math.sin(self.theta + delta_theta) - math.sin(self.theta))
-            self.y += radius * (math.cos(self.theta) - math.cos(self.theta + delta_theta))
-            self.theta += delta_theta
-        else:
-            # Straight line
-            self.x += self.linear_x * math.cos(self.theta) * dt
-            self.y += self.linear_x * math.sin(self.theta) * dt
+    def esp_odom_callback(self, msg):
+        """Store latest ESP odometry data."""
+        self.latest_esp_odom = msg
+        self.esp_odom_received = True
 
     def publish_odom(self):
-        """Publish current odometry state."""
-        # Normalize theta to [-π, π]
-        while self.theta > math.pi:
-            self.theta -= 2 * math.pi
-        while self.theta < -math.pi:
-            self.theta += 2 * math.pi
+        """Publish current odometry state (same structure as before)."""
+        # Wait for ESP odometry before publishing
+        if not self.esp_odom_received or self.latest_esp_odom is None:
+            self.get_logger().warn("Waiting for ESP odometry data on /esp/odom...", throttle_duration_sec=2.0)
+            return
         
-        # Create Odometry message (required by EKF)
+        # Create Odometry message (required by EKF) - same structure as before
         msg = Odometry()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = "odom"
         msg.child_frame_id = "base_link"  # Critical: EKF needs this!
         
-        # Set position
-        msg.pose.pose.position.x = self.x
-        msg.pose.pose.position.y = self.y
-        msg.pose.pose.position.z = 0.0
+        # Copy position from ESP
+        msg.pose.pose.position.x = self.latest_esp_odom.pose.pose.position.x
+        msg.pose.pose.position.y = self.latest_esp_odom.pose.pose.position.y
+        msg.pose.pose.position.z = self.latest_esp_odom.pose.pose.position.z
         
-        # Convert theta to quaternion
-        q = self.euler_to_quaternion(0, 0, self.theta)
-        msg.pose.pose.orientation = q
+        # Copy orientation from ESP
+        msg.pose.pose.orientation.x = self.latest_esp_odom.pose.pose.orientation.x
+        msg.pose.pose.orientation.y = self.latest_esp_odom.pose.pose.orientation.y
+        msg.pose.pose.orientation.z = self.latest_esp_odom.pose.pose.orientation.z
+        msg.pose.pose.orientation.w = self.latest_esp_odom.pose.pose.orientation.w
         
-        # Set velocity (from cmd_vel integration)
-        msg.twist.twist.linear.x = self.linear_x
-        msg.twist.twist.angular.z = self.angular_z
+        # Copy pose covariance if ESP provides it
+        if len(self.latest_esp_odom.pose.covariance) == 36:
+            msg.pose.covariance = self.latest_esp_odom.pose.covariance
+        
+        # Copy twist from ESP (if provided)
+        msg.twist.twist.linear.x = self.latest_esp_odom.twist.twist.linear.x
+        msg.twist.twist.linear.y = self.latest_esp_odom.twist.twist.linear.y
+        msg.twist.twist.linear.z = self.latest_esp_odom.twist.twist.linear.z
+        msg.twist.twist.angular.x = self.latest_esp_odom.twist.twist.angular.x
+        msg.twist.twist.angular.y = self.latest_esp_odom.twist.twist.angular.y
+        msg.twist.twist.angular.z = self.latest_esp_odom.twist.twist.angular.z
+        
+        # Copy twist covariance if ESP provides it
+        if len(self.latest_esp_odom.twist.covariance) == 36:
+            msg.twist.covariance = self.latest_esp_odom.twist.covariance
         
         # Publish
         self.odom_pub.publish(msg)
         
-        # Log periodically
+        # Log periodically (same format as before)
         self.get_logger().debug(
-            f"Odometry: X={self.x:.3f}m, Y={self.y:.3f}m, θ={math.degrees(self.theta):.1f}°"
+            f"Odometry: X={msg.pose.pose.position.x:.3f}m, "
+            f"Y={msg.pose.pose.position.y:.3f}m, "
+            f"θ={math.degrees(self.quaternion_to_yaw(msg.pose.pose.orientation)):.1f}°"
         )
 
     @staticmethod
-    def euler_to_quaternion(roll, pitch, yaw):
-        """Convert Euler angles to Quaternion."""
-        cy = math.cos(yaw * 0.5)
-        sy = math.sin(yaw * 0.5)
-        cp = math.cos(pitch * 0.5)
-        sp = math.sin(pitch * 0.5)
-        cr = math.cos(roll * 0.5)
-        sr = math.sin(roll * 0.5)
-
-        q = Quaternion()
-        q.w = cr * cp * cy + sr * sp * sy
-        q.x = sr * cp * cy - cr * sp * sy
-        q.y = cr * sp * cy + sr * cp * sy
-        q.z = cr * cp * sy - sr * sp * cy
-        
-        return q
+    def quaternion_to_yaw(quat):
+        """Convert quaternion to yaw angle (for logging)."""
+        # Extract yaw from quaternion
+        siny_cosp = 2.0 * (quat.w * quat.z + quat.x * quat.y)
+        cosy_cosp = 1.0 - 2.0 * (quat.y * quat.y + quat.z * quat.z)
+        yaw = math.atan2(siny_cosp, cosy_cosp)
+        return yaw
 
 
 def main(args=None):

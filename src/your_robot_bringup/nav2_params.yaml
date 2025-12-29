@@ -47,7 +47,7 @@ global_costmap:
       scan:
         topic: /scan
         expected_update_rate: 10.0
-        sensor_frame: lidar_link
+        sensor_frame: laser
         data_type: LaserScan
         marking: true
         clearing: true
@@ -70,7 +70,7 @@ local_costmap:
       scan:
         topic: /scan
         expected_update_rate: 10.0
-        sensor_frame: lidar_link
+        sensor_frame: laser
         data_type: LaserScan
         marking: true
         clearing: true

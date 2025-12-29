@@ -1,1 +1,20 @@
-/home/caterpillar/ros2_ws/build/your_robot_bringup/package.xml
+<?xml version="1.0"?>
+<package format="3">
+  <name>your_robot_bringup</name>
+  <version>0.0.1</version>
+  <description>Bringup package for autonomous rover</description>
+
+  <maintainer email="you@example.com">caterpillar</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>rplidar_ros</exec_depend>
+  <exec_depend>bts_motor_controller</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

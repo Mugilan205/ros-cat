@@ -3,11 +3,11 @@
   <link name="base_link"/>
   <link name="left_wheel"/>
   <link name="right_wheel"/>
-  <link name="lidar_link"/>
+  <link name="laser"/>
 
-  <joint name="lidar_joint" type="fixed">
+  <joint name="laser_joint" type="fixed">
     <parent link="base_link"/>
-    <child link="lidar_link"/>
+    <child link="laser"/>
     <origin xyz="0.12 0 0.12" rpy="0 0 0"/>
   </joint>
 

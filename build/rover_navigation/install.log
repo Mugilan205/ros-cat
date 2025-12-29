@@ -1,6 +1,7 @@
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/local_planner_lwb.py
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/dashboard_node.py
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/odometry_node.py
+/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/esp_serial_odometry_node.py
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/obstacle_detection.py
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/rrt_planner.py
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/__init__.py
@@ -12,6 +13,7 @@
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/__pycache__/local_planner_lwb.cpython-312.pyc
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/__pycache__/dashboard_node.cpython-312.pyc
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/__pycache__/odometry_node.cpython-312.pyc
+/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/__pycache__/esp_serial_odometry_node.cpython-312.pyc
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/__pycache__/obstacle_detection.cpython-312.pyc
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/__pycache__/rrt_planner.cpython-312.pyc
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/__pycache__/__init__.cpython-312.pyc
@@ -35,6 +37,7 @@
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation-0.0.1-py3.12.egg-info/requires.txt
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/a_star_planner
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/esp8266_bridge
+/home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/esp_serial_odometry_node
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/lwb_planner
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/navigation_dashboard
 /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/obstacle_detection

@@ -45,9 +45,20 @@ ODOM_PID=$!
 
 sleep 2
 
+# Check if /odom topic exists (publisher creates it immediately)
 if ! ros2 topic list | grep -q "^/odom$"; then
   echo "✗ ERROR: /odom topic not found"
   exit 1
+fi
+
+# Check if ESP is publishing (odometry_node needs ESP data)
+if ! ros2 topic list | grep -qE "^/esp/odom$|^esp/odom$"; then
+  echo "⚠ WARNING: /esp/odom topic not found"
+  echo "  odometry_node requires ESP to publish odometry"
+  echo "  /odom topic exists but may not have messages until ESP publishes"
+  echo "  Continuing anyway..."
+else
+  echo "✓ ESP odometry topic found"
 fi
 
 echo "✓ Odometry running (PID: $ODOM_PID)"
@@ -110,7 +121,7 @@ if ! ros2 topic list 2>/dev/null | grep -qE "^/scan$|^scan$"; then
   echo "    - Check: dmesg | grep ttyUSB0"
   echo "  Continuing anyway..."
 else
-  echo "✓ LiDAR running (PID: $LIDAR_PID)"
+echo "✓ LiDAR running (PID: $LIDAR_PID)"
 fi
 echo
 

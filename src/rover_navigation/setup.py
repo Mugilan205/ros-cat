@@ -43,6 +43,7 @@ setup(
             'lwb_planner = rover_navigation.local_planner_lwb:main',
             'planner_manager = rover_navigation.planner_manager:main',
             'navigation_dashboard = rover_navigation.dashboard_node:main',
+            'esp_serial_odometry_node = rover_navigation.esp_serial_odometry_node:main',
         ],
     },
 )
