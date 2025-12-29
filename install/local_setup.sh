@@ -16,6 +16,7 @@ if [ -z "$COLCON_CURRENT_PREFIX" ]; then
 else
   _colcon_prefix_sh_COLCON_CURRENT_PREFIX="$COLCON_CURRENT_PREFIX"
 fi
+
 # function to prepend a value to a variable
 # which uses colons as separators
 # duplicates as well as trailing separators are avoided

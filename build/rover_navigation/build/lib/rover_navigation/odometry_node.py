@@ -6,7 +6,7 @@ Publishes position and orientation from wheel encoders to /odom topic.
 
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import PoseStamped, Twist, Quaternion
+from geometry_msgs.msg import Twist, Quaternion
 from nav_msgs.msg import Odometry
 import math
 
@@ -34,7 +34,7 @@ class OdometryNode(Node):
         self.angular_z = 0.0
         
         # Create publishers
-        self.odom_pub = self.create_publisher(PoseStamped, "/odom", 10)
+        self.odom_pub = self.create_publisher(Odometry, "/odom", 10)
         
         # Subscribe to command velocity to integrate odometry
         self.cmd_vel_sub = self.create_subscription(
@@ -80,19 +80,24 @@ class OdometryNode(Node):
         while self.theta < -math.pi:
             self.theta += 2 * math.pi
         
-        # Create PoseStamped message
-        msg = PoseStamped()
+        # Create Odometry message (required by EKF)
+        msg = Odometry()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = "odom"
+        msg.child_frame_id = "base_link"  # Critical: EKF needs this!
         
         # Set position
-        msg.pose.position.x = self.x
-        msg.pose.position.y = self.y
-        msg.pose.position.z = 0.0
+        msg.pose.pose.position.x = self.x
+        msg.pose.pose.position.y = self.y
+        msg.pose.pose.position.z = 0.0
         
         # Convert theta to quaternion
         q = self.euler_to_quaternion(0, 0, self.theta)
-        msg.pose.orientation = q
+        msg.pose.pose.orientation = q
+        
+        # Set velocity (from cmd_vel integration)
+        msg.twist.twist.linear.x = self.linear_x
+        msg.twist.twist.angular.z = self.angular_z
         
         # Publish
         self.odom_pub.publish(msg)

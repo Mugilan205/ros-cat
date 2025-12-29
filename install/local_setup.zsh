@@ -10,7 +10,6 @@ else
   _colcon_prefix_zsh_COLCON_CURRENT_PREFIX="$COLCON_CURRENT_PREFIX"
 fi
 
-
 # function to convert array-like strings into arrays
 # to workaround SH_WORD_SPLIT not being set
 _colcon_prefix_zsh_convert_to_array() {
