@@ -35,10 +35,10 @@ start_term() {
   gnome-terminal --title="${title}" -- bash -c "set +e; source /opt/ros/jazzy/setup.bash; source ~/ros2_ws/install/setup.bash; $*; echo \"[${title}] exited with $?\"; exec bash"
 }
 
-LIDAR_PORT="/dev/ttyUSB0"
+LIDAR_PORT="/dev/ttyUSB1"
 [ -e "${LIDAR_PORT}" ] || fail "LiDAR port ${LIDAR_PORT} not found."
 
-ESP_PORT="/dev/ttyUSB1"
+ESP_PORT="/dev/ttyUSB0"
 [ -e "${ESP_PORT}" ] || fail "ESP odometry port ${ESP_PORT} not found."
 
 echo "🚀 Starting LiDAR..."

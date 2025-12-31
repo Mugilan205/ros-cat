@@ -1,5 +1,6 @@
 [console_scripts]
 a_star_planner = rover_navigation.global_planner_a_star:main
+cmdvel_to_wheels = rover_navigation.cmdvel_to_wheels:main
 esp8266_bridge = rover_navigation.esp8266_bridge:main
 esp_serial_odometry_node = rover_navigation.esp_serial_odometry_node:main
 lwb_planner = rover_navigation.local_planner_lwb:main

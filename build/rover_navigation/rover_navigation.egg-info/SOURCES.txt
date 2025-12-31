@@ -16,6 +16,7 @@ launch/obstacle_detection.launch.py
 launch/rrt_planner.launch.py
 resource/rover_navigation
 rover_navigation/__init__.py
+rover_navigation/cmdvel_to_wheels.py
 rover_navigation/costmap.py
 rover_navigation/dashboard_node.py
 rover_navigation/esp8266_bridge.py

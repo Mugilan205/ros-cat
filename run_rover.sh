@@ -89,13 +89,13 @@ echo
 echo "[5/6] Starting RPLIDAR..."
 
 # Check if hardware is connected
-if [ ! -e "/dev/ttyUSB0" ]; then
-  echo "⚠ WARNING: /dev/ttyUSB0 not found - hardware may not be connected"
+if [ ! -e "/dev/ttyUSB1" ]; then
+  echo "⚠ WARNING: /dev/ttyUSB1 not found - hardware may not be connected"
   echo "  Continuing anyway (topic may not appear)..."
 fi
 
 ros2 launch rplidar_ros rplidar.launch.py \
-  serial_port:=/dev/ttyUSB0 \
+  serial_port:=/dev/ttyUSB1 \
   frame_id:=laser \
   scan_mode:=Standard &
 LIDAR_PID=$!
@@ -115,10 +115,10 @@ if ! ros2 topic list 2>/dev/null | grep -qE "^/scan$|^scan$"; then
   echo "✗ WARNING: /scan topic not found after 10 seconds"
   echo "  RPLIDAR process is running (PID: $LIDAR_PID)"
   echo "  Possible causes:"
-  echo "    - Hardware not connected to /dev/ttyUSB0"
+  echo "    - Hardware not connected to /dev/ttyUSB1"
   echo "    - Hardware initialization failed"
   echo "    - Check: ros2 topic list | grep scan"
-  echo "    - Check: dmesg | grep ttyUSB0"
+  echo "    - Check: dmesg | grep ttyUSB1"
   echo "  Continuing anyway..."
 else
 echo "✓ LiDAR running (PID: $LIDAR_PID)"

@@ -47,6 +47,7 @@ setup(
             'planner_manager = rover_navigation.planner_manager:main',
             'navigation_dashboard = rover_navigation.dashboard_node:main',
             'esp_serial_odometry_node = rover_navigation.esp_serial_odometry_node:main',
+            'cmdvel_to_wheels = rover_navigation.cmdvel_to_wheels:main',
         ],
     },
 )
