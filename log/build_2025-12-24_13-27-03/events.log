@@ -1,5 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.004421] (-) JobUnselected: {'identifier': 'bts_motor_controller'}
-[0.004525] (-) JobUnselected: {'identifier': 'rplidar_ros'}
-[0.004560] (-) JobUnselected: {'identifier': 'your_robot_bringup'}
-[0.004589] (-) EventReactorShutdown: {}

@@ -356,3 +356,10 @@ ros2 run tf2_ros tf2_echo odom base_link 2>&1 | head -3 | grep -q "At time" && e
 
 
 
+
+
+
+
+
+
+

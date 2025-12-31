@@ -1,0 +1,24 @@
+[7.140s] Invoking command in '/home/caterpillar/ros2_ws/build/bts_motor_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/bts_motor_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/bts_motor_controller/build --no-deps symlink_data
+[8.607s] running develop
+[9.962s] running egg_info
+[9.962s] creating bts_motor_controller.egg-info
+[10.135s] writing bts_motor_controller.egg-info/PKG-INFO
+[10.135s] writing dependency_links to bts_motor_controller.egg-info/dependency_links.txt
+[10.136s] writing entry points to bts_motor_controller.egg-info/entry_points.txt
+[10.137s] writing requirements to bts_motor_controller.egg-info/requires.txt
+[10.142s] writing top-level names to bts_motor_controller.egg-info/top_level.txt
+[10.144s] writing manifest file 'bts_motor_controller.egg-info/SOURCES.txt'
+[10.583s] reading manifest file 'bts_motor_controller.egg-info/SOURCES.txt'
+[10.589s] writing manifest file 'bts_motor_controller.egg-info/SOURCES.txt'
+[10.753s] running build_ext
+[10.753s] Creating /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts-motor-controller.egg-link (link to .)
+[10.756s] Installing motor_node script to /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/bts_motor_controller
+[10.758s] 
+[10.761s] Installed /home/caterpillar/ros2_ws/build/bts_motor_controller
+[10.761s] running symlink_data
+[10.762s] creating /home/caterpillar/ros2_ws/install/bts_motor_controller/share/ament_index
+[10.762s] creating /home/caterpillar/ros2_ws/install/bts_motor_controller/share/ament_index/resource_index
+[10.763s] creating /home/caterpillar/ros2_ws/install/bts_motor_controller/share/ament_index/resource_index/packages
+[10.778s] symbolically linking /home/caterpillar/ros2_ws/build/bts_motor_controller/resource/bts_motor_controller -> /home/caterpillar/ros2_ws/install/bts_motor_controller/share/ament_index/resource_index/packages
+[10.778s] symbolically linking /home/caterpillar/ros2_ws/build/bts_motor_controller/package.xml -> /home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller
+[10.994s] Invoked command in '/home/caterpillar/ros2_ws/build/bts_motor_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/bts_motor_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/bts_motor_controller/build --no-deps symlink_data
