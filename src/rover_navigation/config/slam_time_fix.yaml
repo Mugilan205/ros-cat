@@ -1,0 +1,4 @@
+slam_toolbox:
+  ros__parameters:
+    tf_buffer_duration: 30.0
+    minimum_time_interval: 0.05

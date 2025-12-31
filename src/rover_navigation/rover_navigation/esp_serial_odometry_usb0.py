@@ -14,7 +14,7 @@ from geometry_msgs.msg import TransformStamped
 class EspSerialOdometryUSB0(Node):
     def __init__(self):
         super().__init__('esp_serial_odometry_usb0')
-        self.port = '/dev/ttyUSB2'
+        self.port = '/dev/ttyUSB0'
         self.baudrate = 115200
         self.ser = None
         self.valid_count = 0

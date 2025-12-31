@@ -14,8 +14,8 @@ class ESPSerialToOdom(Node):
     def __init__(self):
         super().__init__('esp_serial_to_odom')
 
-        # Default to /dev/ttyUSB2, but allow override via parameter
-        self.declare_parameter('port', '/dev/ttyUSB2')
+        # Use persistent device path for ESP (FTDI)
+        self.declare_parameter('port', '/dev/serial/by-id/usb-FTDI_USB_Serial_Converter_FTB6SPL3-if00-port0')
         self.declare_parameter('baud', 115200)
         
         self.port = self.get_parameter('port').value

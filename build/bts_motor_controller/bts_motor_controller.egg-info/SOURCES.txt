@@ -10,7 +10,11 @@ setup.py
 ../../build/bts_motor_controller/bts_motor_controller.egg-info/zip-safe
 bts_motor_controller/__init__.py
 bts_motor_controller/motor_node.py
+bts_motor_controller.egg-info/PKG-INFO
+bts_motor_controller.egg-info/SOURCES.txt
+bts_motor_controller.egg-info/dependency_links.txt
+bts_motor_controller.egg-info/entry_points.txt
+bts_motor_controller.egg-info/requires.txt
+bts_motor_controller.egg-info/top_level.txt
+bts_motor_controller.egg-info/zip-safe
 resource/bts_motor_controller
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

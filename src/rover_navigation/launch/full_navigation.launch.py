@@ -36,7 +36,7 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_sim_time': LaunchConfiguration('use_sim_time'),
-            'robot_description': Command(['xacro ', urdf_path])
+            'robot_description': Command(['xacro', urdf_path])
         }]
     )
 
@@ -49,7 +49,11 @@ def generate_launch_description():
         executable='esp_serial_odometry_node',
         name='esp_serial_to_odom',
         output='screen',
-        parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
+        parameters=[{
+            'use_sim_time': LaunchConfiguration('use_sim_time'),
+            'port': '/dev/ttyUSB1',
+            'baud': 115200,
+        }]
     )
 
     # ---------------------------
@@ -63,7 +67,7 @@ def generate_launch_description():
         parameters=[{
             'serial_port': '/dev/ttyUSB0',
             'serial_baudrate': 115200,
-            'frame_id': 'laser',
+            'frame_id': 'laser_frame',
             'inverted': False,
             'angle_compensate': True,
             'scan_frequency': 10.0,

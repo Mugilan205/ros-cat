@@ -1,0 +1,22 @@
+[1.428s] Invoking command in '/home/caterpillar/ros2_ws/src/your_robot_bringup': AMENT_PREFIX_PATH=/home/caterpillar/ros2_ws/install/bts_motor_controller:/home/caterpillar/ros2_ws/install/your_robot_bringup:/home/caterpillar/ros2_ws/install/rplidar_ros:/home/caterpillar/ros2_ws/install/rover_navigation:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/your_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/your_robot_bringup build --build-base /home/caterpillar/ros2_ws/build/your_robot_bringup/build install --record /home/caterpillar/ros2_ws/build/your_robot_bringup/install.log --single-version-externally-managed install_data
+[1.871s] running egg_info
+[1.908s] writing ../../build/your_robot_bringup/your_robot_bringup.egg-info/PKG-INFO
+[1.908s] writing dependency_links to ../../build/your_robot_bringup/your_robot_bringup.egg-info/dependency_links.txt
+[1.913s] writing entry points to ../../build/your_robot_bringup/your_robot_bringup.egg-info/entry_points.txt
+[1.913s] writing requirements to ../../build/your_robot_bringup/your_robot_bringup.egg-info/requires.txt
+[1.914s] writing top-level names to ../../build/your_robot_bringup/your_robot_bringup.egg-info/top_level.txt
+[1.987s] reading manifest file '../../build/your_robot_bringup/your_robot_bringup.egg-info/SOURCES.txt'
+[1.988s] writing manifest file '../../build/your_robot_bringup/your_robot_bringup.egg-info/SOURCES.txt'
+[1.989s] running build
+[1.989s] running build_py
+[1.989s] running install
+[2.001s] running install_lib
+[2.036s] running install_data
+[2.036s] running install_egg_info
+[2.073s] removing '/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your_robot_bringup-0.0.0-py3.12.egg-info' (and everything under it)
+[2.073s] Copying ../../build/your_robot_bringup/your_robot_bringup.egg-info to /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your_robot_bringup-0.0.0-py3.12.egg-info
+[2.074s] running install_scripts
+[2.306s] Installing rrt_autonomous script to /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/your_robot_bringup
+[2.306s] Installing wheel_odom script to /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/your_robot_bringup
+[2.309s] writing list of installed files to '/home/caterpillar/ros2_ws/build/your_robot_bringup/install.log'
+[2.392s] Invoked command in '/home/caterpillar/ros2_ws/src/your_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/caterpillar/ros2_ws/install/bts_motor_controller:/home/caterpillar/ros2_ws/install/your_robot_bringup:/home/caterpillar/ros2_ws/install/rplidar_ros:/home/caterpillar/ros2_ws/install/rover_navigation:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/your_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/your_robot_bringup build --build-base /home/caterpillar/ros2_ws/build/your_robot_bringup/build install --record /home/caterpillar/ros2_ws/build/your_robot_bringup/install.log --single-version-externally-managed install_data

@@ -1,29 +1,104 @@
 #!/bin/bash
-# Load ROS2
-source /opt/ros/jazzy/setup.bash
 
-echo "Starting RPLIDAR..."
-gnome-terminal -- bash -c "source /opt/ros/jazzy/setup.bash; ros2 launch rplidar_ros rplidar.launch.py serial_port:=/dev/ttyUSB0 frame_id:=laser; exec bash"
+set -euo pipefail
 
-sleep 3  # Wait for /scan to start
+fail() { echo "[start_mapping] Error: $1" >&2; exit 1; }
+trap 'fail "line $LINENO"' ERR
 
-echo "Starting laser TF broadcaster..."
-gnome-terminal -- bash -c "source /opt/ros/jazzy/setup.bash; python3 ~/ros2_ws/bridge/laser_tf.py; exec bash"
+safe_source() {
+  # Some ROS setup scripts expect AMENT_TRACE_SETUP_FILES and other vars even under nounset
+  set +u
+  source "$1"
+  set -u
+}
 
-sleep 1  # Wait for TF
+command -v ros2 >/dev/null || fail "ros2 not found. Source ROS before running."
+command -v xacro >/dev/null || fail "xacro not found. Install or source the right workspace."
+command -v gnome-terminal >/dev/null || fail "gnome-terminal not available."
 
-echo "Starting fake odometry..."
-gnome-terminal -- bash -c "source /opt/ros/jazzy/setup.bash; python3 ~/ros2_ws/bridge/fake_odom.py; exec bash"
+echo "========== ROS 2 SLAM SAFE START =========="
 
-sleep 2  # Wait for odom → base_link TF
+safe_source /opt/ros/jazzy/setup.bash
+cd ~/ros2_ws
 
-echo "Starting SLAM Toolbox..."
-gnome-terminal -- bash -c "source /opt/ros/jazzy/setup.bash; ros2 launch slam_toolbox online_sync_launch.py; exec bash"
+if [ ! -d install ]; then
+  echo "🔧 First build..."
+fi
+
+echo "🔧 Building workspace..."
+colcon build --symlink-install
+
+safe_source ~/ros2_ws/install/setup.bash
+
+start_term() {
+  local title="$1"; shift
+  gnome-terminal --title="${title}" -- bash -c "set +e; source /opt/ros/jazzy/setup.bash; source ~/ros2_ws/install/setup.bash; $*; echo \"[${title}] exited with $?\"; exec bash"
+}
+
+LIDAR_PORT="/dev/ttyUSB0"
+[ -e "${LIDAR_PORT}" ] || fail "LiDAR port ${LIDAR_PORT} not found."
+
+ESP_PORT="/dev/ttyUSB1"
+[ -e "${ESP_PORT}" ] || fail "ESP odometry port ${ESP_PORT} not found."
+
+echo "🚀 Starting LiDAR..."
+start_term "LiDAR" "ros2 run rplidar_ros rplidar_composition --ros-args -p serial_port:=${LIDAR_PORT} -p serial_baudrate:=115200"
+
+sleep 4
+
+echo "🤖 Starting robot_state_publisher..."
+start_term "robot_state_publisher" "robot_description=\"\$(xacro ~/ros2_ws/src/simple_rover_description/urdf/simple_rover.urdf.xacro)\"; ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:=\"\${robot_description}\""
+
+sleep 4
+
+echo "📡 Starting ESP Serial Odometry..."
+start_term "esp_serial_odometry" "ros2 run rover_navigation esp_serial_odometry_node --ros-args -p port:=${ESP_PORT} -p baud:=115200"
+
+sleep 4
+
+echo "⏳ Waiting for TF (odom -> base_link and base_link -> laser_frame)..."
+set +e
+python3 - <<'PY'
+import sys, time
+import rclpy
+from rclpy.time import Time
+from tf2_ros import Buffer, TransformListener
+
+FRAMES = [('odom', 'base_link'), ('base_link', 'laser_frame')]
+TIMEOUT = 20.0
+
+rclpy.init()
+node = rclpy.create_node('tf_waiter')
+buf = Buffer()
+listener = TransformListener(buf, node, spin_thread=False)
+
+start = time.time()
+ok = False
+while time.time() - start < TIMEOUT:
+  rclpy.spin_once(node, timeout_sec=0.1)
+  ready = True
+  for target, source in FRAMES:
+    if not buf.can_transform(target, source, Time()):
+      ready = False
+      break
+  if ready:
+    ok = True
+    break
+
+node.destroy_node()
+rclpy.shutdown()
+if not ok:
+  sys.exit(1)
+PY
+rc=$?
+set -e
+if [ $rc -ne 0 ]; then
+  fail "TF not available for odom->base_link or base_link->laser_frame within timeout"
+fi
 
 sleep 2
 
-echo "Starting RViz2..."
-gnome-terminal -- bash -c "source /opt/ros/jazzy/setup.bash; rviz2; exec bash"
+echo "🗺️ Starting SLAM Toolbox..."
+start_term "slam_toolbox" "ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/home/caterpillar/ros2_ws/src/rover_navigation/config/slam_params.yaml odom_frame:=odom base_frame:=base_link scan_topic:=/scan use_sim_time:=false"
 
-echo "All systems started successfully!"
-
+echo "✅ All nodes launched safely"

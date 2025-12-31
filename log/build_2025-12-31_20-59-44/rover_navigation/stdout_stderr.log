@@ -1,0 +1,32 @@
+running develop
+running egg_info
+writing rover_navigation.egg-info/PKG-INFO
+writing dependency_links to rover_navigation.egg-info/dependency_links.txt
+writing entry points to rover_navigation.egg-info/entry_points.txt
+writing requirements to rover_navigation.egg-info/requires.txt
+writing top-level names to rover_navigation.egg-info/top_level.txt
+reading manifest file 'rover_navigation.egg-info/SOURCES.txt'
+writing manifest file 'rover_navigation.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover-navigation.egg-link (link to .)
+Installing a_star_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+Installing esp8266_bridge script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+Installing esp_serial_odometry_node script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+Installing lwb_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+Installing navigation_dashboard script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+Installing obstacle_detection script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+Installing odometry_node script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+Installing path_executor script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+Installing planner_manager script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+Installing rrt_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+
+Installed /home/caterpillar/ros2_ws/build/rover_navigation
+running symlink_data
+symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/resource/rover_navigation -> /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index/resource_index/packages
+symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/package.xml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation
+symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/launch/obstacle_detection.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/launch/rrt_planner.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/launch/full_navigation.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/launch/a_star_lwb_navigation.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/config/nav2_params.yaml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/config
+symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/config/slam_params.yaml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/config

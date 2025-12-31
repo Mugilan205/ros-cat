@@ -12,7 +12,7 @@ class ESPSerialOdom(Node):
     def __init__(self):
         super().__init__('esp_serial_odom')
 
-        self.port = '/dev/ttyUSB2'
+        self.port = '/dev/serial/by-id/usb-FTDI_USB_Serial_Converter_FTB6SPL3-if00-port0'
         self.baud = 115200
 
         self.publisher = self.create_publisher(Odometry, '/esp/odom', 10)

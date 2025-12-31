@@ -1,4 +1,3 @@
-README.md
 package.xml
 setup.cfg
 setup.py
@@ -30,3 +29,10 @@ rover_navigation/odometry_node.py
 rover_navigation/path_executor.py
 rover_navigation/planner_manager.py
 rover_navigation/rrt_planner.py
+rover_navigation.egg-info/PKG-INFO
+rover_navigation.egg-info/SOURCES.txt
+rover_navigation.egg-info/dependency_links.txt
+rover_navigation.egg-info/entry_points.txt
+rover_navigation.egg-info/requires.txt
+rover_navigation.egg-info/top_level.txt
+rover_navigation.egg-info/zip-safe

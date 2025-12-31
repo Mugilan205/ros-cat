@@ -1,0 +1,1 @@
+/home/caterpillar/ros2_ws/src/rover_navigation/launch/full_navigation.launch.py
