@@ -37,7 +37,7 @@ class WheelOdom(Node):
             return
         
         try:
-            line = self.ser.readline().decode().strip()
+            line = self.ser.readline().decode('utf-8', errors='ignore').strip()
             if not line:
                 return
             left_ticks, right_ticks = map(int, line.split(','))

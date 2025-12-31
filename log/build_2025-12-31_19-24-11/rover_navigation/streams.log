@@ -1,0 +1,90 @@
+[2.719s] Invoking command in '/home/caterpillar/ros2_ws/src/rover_navigation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/rover_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_navigation build --build-base /home/caterpillar/ros2_ws/build/rover_navigation/build install --record /home/caterpillar/ros2_ws/build/rover_navigation/install.log --single-version-externally-managed install_data
+[3.229s] running egg_info
+[3.230s] creating ../../build/rover_navigation/rover_navigation.egg-info
+[3.265s] writing ../../build/rover_navigation/rover_navigation.egg-info/PKG-INFO
+[3.265s] writing dependency_links to ../../build/rover_navigation/rover_navigation.egg-info/dependency_links.txt
+[3.265s] writing entry points to ../../build/rover_navigation/rover_navigation.egg-info/entry_points.txt
+[3.266s] writing requirements to ../../build/rover_navigation/rover_navigation.egg-info/requires.txt
+[3.266s] writing top-level names to ../../build/rover_navigation/rover_navigation.egg-info/top_level.txt
+[3.266s] writing manifest file '../../build/rover_navigation/rover_navigation.egg-info/SOURCES.txt'
+[3.348s] reading manifest file '../../build/rover_navigation/rover_navigation.egg-info/SOURCES.txt'
+[3.349s] writing manifest file '../../build/rover_navigation/rover_navigation.egg-info/SOURCES.txt'
+[3.360s] running build
+[3.360s] running build_py
+[3.361s] creating /home/caterpillar/ros2_ws/build/rover_navigation/build
+[3.361s] creating /home/caterpillar/ros2_ws/build/rover_navigation/build/lib
+[3.361s] creating /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.362s] copying rover_navigation/esp_serial_odometry_usb0.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.362s] copying rover_navigation/local_planner_lwb.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.362s] copying rover_navigation/dashboard_node.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.362s] copying rover_navigation/odometry_node.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.362s] copying rover_navigation/esp_serial_odometry_node.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.362s] copying rover_navigation/obstacle_detection.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.362s] copying rover_navigation/rrt_planner.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.363s] copying rover_navigation/__init__.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.363s] copying rover_navigation/global_planner_a_star.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.363s] copying rover_navigation/costmap.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.363s] copying rover_navigation/planner_manager.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.363s] copying rover_navigation/esp_serial_odom.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.363s] copying rover_navigation/esp8266_bridge.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.363s] copying rover_navigation/path_executor.py -> /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation
+[3.364s] running install
+[3.376s] running install_lib
+[3.419s] creating /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.419s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/esp_serial_odometry_usb0.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.419s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/local_planner_lwb.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.419s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/dashboard_node.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.419s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/odometry_node.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.420s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/esp_serial_odometry_node.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.420s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/obstacle_detection.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.420s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/rrt_planner.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.420s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/__init__.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.420s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/global_planner_a_star.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.421s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/costmap.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.421s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/planner_manager.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.421s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/esp_serial_odom.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.421s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/esp8266_bridge.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.422s] copying /home/caterpillar/ros2_ws/build/rover_navigation/build/lib/rover_navigation/path_executor.py -> /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation
+[3.423s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/esp_serial_odometry_usb0.py to esp_serial_odometry_usb0.cpython-312.pyc
+[3.426s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/local_planner_lwb.py to local_planner_lwb.cpython-312.pyc
+[3.430s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/dashboard_node.py to dashboard_node.cpython-312.pyc
+[3.432s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/odometry_node.py to odometry_node.cpython-312.pyc
+[3.434s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/esp_serial_odometry_node.py to esp_serial_odometry_node.cpython-312.pyc
+[3.436s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/obstacle_detection.py to obstacle_detection.cpython-312.pyc
+[3.438s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/rrt_planner.py to rrt_planner.cpython-312.pyc
+[3.442s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/__init__.py to __init__.cpython-312.pyc
+[3.444s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/global_planner_a_star.py to global_planner_a_star.cpython-312.pyc
+[3.448s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/costmap.py to costmap.cpython-312.pyc
+[3.451s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/planner_manager.py to planner_manager.cpython-312.pyc
+[3.452s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/esp_serial_odom.py to esp_serial_odom.cpython-312.pyc
+[3.453s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/esp8266_bridge.py to esp8266_bridge.cpython-312.pyc
+[3.456s] byte-compiling /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation/path_executor.py to path_executor.cpython-312.pyc
+[3.458s] running install_data
+[3.458s] creating /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index
+[3.458s] creating /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index/resource_index
+[3.459s] creating /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index/resource_index/packages
+[3.459s] copying resource/rover_navigation -> /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index/resource_index/packages
+[3.459s] copying package.xml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation
+[3.459s] creating /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.459s] copying launch/obstacle_detection.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.459s] copying launch/rrt_planner.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.460s] copying launch/full_navigation.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.460s] copying launch/a_star_lwb_navigation.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.460s] creating /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/config
+[3.460s] copying config/nav2_params.yaml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/config
+[3.460s] copying config/slam_params.yaml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/config
+[3.461s] running install_egg_info
+[3.508s] Copying ../../build/rover_navigation/rover_navigation.egg-info to /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover_navigation-0.0.1-py3.12.egg-info
+[3.509s] running install_scripts
+[3.780s] Installing a_star_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.781s] Installing esp8266_bridge script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.782s] Installing esp_serial_odometry_node script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.783s] Installing lwb_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.783s] Installing navigation_dashboard script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.787s] Installing obstacle_detection script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.788s] Installing odometry_node script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.788s] Installing path_executor script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.788s] Installing planner_manager script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.788s] Installing rrt_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.790s] writing list of installed files to '/home/caterpillar/ros2_ws/build/rover_navigation/install.log'
+[3.893s] Invoked command in '/home/caterpillar/ros2_ws/src/rover_navigation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/rover_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_navigation build --build-base /home/caterpillar/ros2_ws/build/rover_navigation/build install --record /home/caterpillar/ros2_ws/build/rover_navigation/install.log --single-version-externally-managed install_data

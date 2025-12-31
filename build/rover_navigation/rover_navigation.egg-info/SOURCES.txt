@@ -9,6 +9,8 @@ setup.py
 ../../build/rover_navigation/rover_navigation.egg-info/requires.txt
 ../../build/rover_navigation/rover_navigation.egg-info/top_level.txt
 ../../build/rover_navigation/rover_navigation.egg-info/zip-safe
+config/nav2_params.yaml
+config/slam_params.yaml
 launch/a_star_lwb_navigation.launch.py
 launch/full_navigation.launch.py
 launch/obstacle_detection.launch.py
@@ -18,8 +20,9 @@ rover_navigation/__init__.py
 rover_navigation/costmap.py
 rover_navigation/dashboard_node.py
 rover_navigation/esp8266_bridge.py
-rover_navigation/esp8266_serial_bridge.py
+rover_navigation/esp_serial_odom.py
 rover_navigation/esp_serial_odometry_node.py
+rover_navigation/esp_serial_odometry_usb0.py
 rover_navigation/global_planner_a_star.py
 rover_navigation/local_planner_lwb.py
 rover_navigation/obstacle_detection.py

@@ -1,1 +1,0 @@
-/home/caterpillar/ros2_ws/src/rover_navigation/launch/a_star_lwb_navigation.launch.py

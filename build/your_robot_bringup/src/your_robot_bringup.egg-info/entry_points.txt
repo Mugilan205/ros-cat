@@ -1,3 +1,0 @@
-[console_scripts]
-rrt_autonomous = your_robot_bringup.rrt_autonomous:main
-wheel_odom = your_robot_bringup.wheel_odom:main

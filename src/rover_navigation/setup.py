@@ -7,14 +7,24 @@ setup(
     version='0.0.1',
     packages=find_packages(exclude=['test']),
     data_files=[
+        # Required by ament
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name,
+            ['package.xml']),
+
+        # Launch files
         ('share/' + package_name + '/launch', [
             'launch/obstacle_detection.launch.py',
             'launch/rrt_planner.launch.py',
             'launch/full_navigation.launch.py',
             'launch/a_star_lwb_navigation.launch.py',
+        ]),
+
+        # Nav2 configuration
+        ('share/' + package_name + '/config', [
+            'config/nav2_params.yaml',
+            'config/slam_params.yaml'
         ]),
     ],
     install_requires=['setuptools'],
@@ -23,15 +33,8 @@ setup(
     author_email='rover@example.com',
     maintainer='Rover Developer',
     maintainer_email='rover@example.com',
-    url='https://github.com/example/rover_navigation',
-    download_url='https://github.com/example/rover_navigation/releases',
-    keywords=['ROS2', 'navigation', 'RRT', 'obstacle-detection'],
-    classifiers=[
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: Apache Software License',
-        'Programming Language :: Python :: 3',
-        'Topic :: Software Development',
-    ],
+    description='Rover navigation stack with Nav2 integration',
+    license='Apache License 2.0',
     entry_points={
         'console_scripts': [
             'obstacle_detection = rover_navigation.obstacle_detection:main',

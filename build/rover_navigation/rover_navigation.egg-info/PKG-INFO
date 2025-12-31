@@ -1,14 +1,9 @@
 Metadata-Version: 2.1
 Name: rover-navigation
 Version: 0.0.1
-Home-page: https://github.com/example/rover_navigation
-Download-URL: https://github.com/example/rover_navigation/releases
+Summary: Rover navigation stack with Nav2 integration
 Author: Rover Developer
 Author-email: rover@example.com
 Maintainer: Rover Developer
 Maintainer-email: rover@example.com
-Keywords: ROS2,navigation,RRT,obstacle-detection
-Classifier: Intended Audience :: Developers
-Classifier: License :: OSI Approved :: Apache Software License
-Classifier: Programming Language :: Python :: 3
-Classifier: Topic :: Software Development
+License: Apache License 2.0

@@ -1,118 +1,153 @@
 from launch import LaunchDescription
-from launch_ros.actions import Node
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, GroupAction, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
+from launch.conditions import IfCondition
+from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
-    """
-    Launch full navigation stack: obstacle detection, RRT planner, and path executor.
-    """
-    
-    pkg_share = FindPackageShare('rover_navigation')
-    
-    # Declare launch arguments
-    frame_id_arg = DeclareLaunchArgument(
-        'frame_id',
-        default_value='odom',
-        description='Frame ID for planning and control'
+    # ---------------------------
+    # Launch Arguments
+    # ---------------------------
+    use_sim_time_arg = DeclareLaunchArgument(
+        'use_sim_time',
+        default_value='false',
+        description='Use simulation (Gazebo) clock if true'
     )
-    
-    lidar_frame_arg = DeclareLaunchArgument(
-        'lidar_frame_id',
-        default_value='laser',
-        description='LiDAR frame ID'
+
+    start_custom_planner_arg = DeclareLaunchArgument(
+        'start_custom_planner',
+        default_value='false',
+        description='Enable custom RRT planner stack (disabled by default)'
     )
+
+    # ---------------------------
+    # Robot Description (URDF)
+    # ---------------------------
+    # Using absolute path as simple_rover_description is not a ROS package
+    urdf_path = '/home/caterpillar/ros2_ws/src/simple_rover_description/urdf/simple_rover.urdf.xacro'
     
-    linear_speed_arg = DeclareLaunchArgument(
-        'linear_speed',
-        default_value='0.5',
-        description='Linear velocity (m/s)'
-    )
-    
-    angular_speed_arg = DeclareLaunchArgument(
-        'angular_speed',
-        default_value='1.0',
-        description='Angular velocity (rad/s)'
-    )
-    
-    # ============================================================
-    # Node 1: Obstacle Detection
-    # ============================================================
-    obstacle_detection_node = Node(
-        package='rover_navigation',
-        executable='obstacle_detection',
-        name='obstacle_detection',
+    robot_state_publisher_node = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        name='robot_state_publisher',
         output='screen',
-        parameters=[
-            {'frame_id': LaunchConfiguration('lidar_frame_id')},
-            {'obstacle_distance_threshold': 1.5},
-            {'max_scan_range': 10.0},
-            {'grid_size': 20.0},
-            {'grid_resolution': 0.1},
-        ],
+        parameters=[{
+            'use_sim_time': LaunchConfiguration('use_sim_time'),
+            'robot_description': Command(['xacro ', urdf_path])
+        }]
     )
-    
-    # ============================================================
-    # Node 2: RRT Planner
-    # ============================================================
-    rrt_planner_node = Node(
+
+    # ---------------------------
+    # ESP Serial Odometry (Primary Odom Source)
+    # ---------------------------
+    # Publishes directly to /odom and broadcasts TF: odom -> base_link
+    esp_odom_node = Node(
         package='rover_navigation',
-        executable='rrt_planner',
-        name='rrt_planner',
+        executable='esp_serial_odometry_node',
+        name='esp_serial_to_odom',
         output='screen',
-        parameters=[
-            {'frame_id': LaunchConfiguration('frame_id')},
-            {'step_size': 0.5},
-            {'max_iterations': 5000},
-            {'obstacle_clearance': 0.3},
-            {'robot_radius': 0.2},
-            {'replan_frequency': 5.0},
-            {'goal_tolerance': 0.3},
-            {'workspace_size': 20.0},
-        ],
+        parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
     )
-    
-    # ============================================================
-    # Node 3: Odometry (Wheel Encoder Integration)
-    # ============================================================
-    odometry_node = Node(
-        package='rover_navigation',
-        executable='odometry_node',
-        name='odometry_node',
+
+    # ---------------------------
+    # RPLIDAR
+    # ---------------------------
+    rplidar_node = Node(
+        package='rplidar_ros',
+        executable='rplidar_composition',
+        name='rplidar_composition',
         output='screen',
-        parameters=[
-            {'wheel_radius': 0.05},
-            {'wheel_base': 0.15},
-            {'encoder_resolution': 20},
-        ],
+        parameters=[{
+            'serial_port': '/dev/ttyUSB0',
+            'serial_baudrate': 115200,
+            'frame_id': 'laser',
+            'inverted': False,
+            'angle_compensate': True,
+            'scan_frequency': 10.0,
+        }]
     )
-    
-    # ============================================================
-    # Node 4: Path Executor
-    # ============================================================
-    path_executor_node = Node(
-        package='rover_navigation',
-        executable='path_executor',
-        name='path_executor',
-        output='screen',
-        parameters=[
-            {'linear_speed': LaunchConfiguration('linear_speed')},
-            {'angular_speed': LaunchConfiguration('angular_speed')},
-            {'lookahead_distance': 0.5},
-            {'path_tolerance': 0.3},
-        ],
+
+    # ---------------------------
+    # SLAM Toolbox (Online Async)
+    # ---------------------------
+    slam_toolbox = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution([
+                FindPackageShare('slam_toolbox'),
+                'launch',
+                'online_async_launch.py'
+            ])
+        ),
+        launch_arguments={
+            'use_sim_time': LaunchConfiguration('use_sim_time'),
+            'slam_params_file': PathJoinSubstitution([
+                FindPackageShare('rover_navigation'),
+                'config',
+                'slam_params.yaml'
+            ])
+        }.items()
     )
-    
+
+    # ---------------------------
+    # Nav2 Bringup (Primary Navigation)
+    # ---------------------------
+    nav2_bringup = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution([
+                FindPackageShare('nav2_bringup'),
+                'launch',
+                'navigation_launch.py'
+            ])
+        ),
+        launch_arguments={
+            'use_sim_time': LaunchConfiguration('use_sim_time'),
+            'autostart': 'true',
+            'params_file': PathJoinSubstitution([
+                FindPackageShare('rover_navigation'),
+                'config',
+                'nav2_params.yaml'
+            ])
+        }.items()
+    )
+
+    # ---------------------------
+    # Custom Planner Stack (Optional)
+    # ---------------------------
+    custom_planner_stack = GroupAction(
+        condition=IfCondition(LaunchConfiguration('start_custom_planner')),
+        actions=[
+            Node(
+                package='rover_navigation',
+                executable='obstacle_detection',
+                name='obstacle_detection',
+                output='screen'
+            ),
+            Node(
+                package='rover_navigation',
+                executable='rrt_planner',
+                name='rrt_planner',
+                output='screen'
+            ),
+            Node(
+                package='rover_navigation',
+                executable='path_executor',
+                name='path_executor',
+                output='screen'
+            ),
+        ]
+    )
+
     return LaunchDescription([
-        frame_id_arg,
-        lidar_frame_arg,
-        linear_speed_arg,
-        angular_speed_arg,
-        obstacle_detection_node,
-        rrt_planner_node,
-        odometry_node,
-        path_executor_node,
+        use_sim_time_arg,
+        start_custom_planner_arg,
+
+        robot_state_publisher_node,
+        esp_odom_node,
+        rplidar_node,
+        slam_toolbox,
+        nav2_bringup,
+        custom_planner_stack
     ])

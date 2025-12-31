@@ -1,0 +1,37 @@
+[2.738s] Invoking command in '/home/caterpillar/ros2_ws/src/bts_motor_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/bts_motor_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bts_motor_controller build --build-base /home/caterpillar/ros2_ws/build/bts_motor_controller/build install --record /home/caterpillar/ros2_ws/build/bts_motor_controller/install.log --single-version-externally-managed install_data
+[3.239s] running egg_info
+[3.239s] creating ../../build/bts_motor_controller/bts_motor_controller.egg-info
+[3.274s] writing ../../build/bts_motor_controller/bts_motor_controller.egg-info/PKG-INFO
+[3.276s] writing dependency_links to ../../build/bts_motor_controller/bts_motor_controller.egg-info/dependency_links.txt
+[3.276s] writing entry points to ../../build/bts_motor_controller/bts_motor_controller.egg-info/entry_points.txt
+[3.276s] writing requirements to ../../build/bts_motor_controller/bts_motor_controller.egg-info/requires.txt
+[3.276s] writing top-level names to ../../build/bts_motor_controller/bts_motor_controller.egg-info/top_level.txt
+[3.276s] writing manifest file '../../build/bts_motor_controller/bts_motor_controller.egg-info/SOURCES.txt'
+[3.357s] reading manifest file '../../build/bts_motor_controller/bts_motor_controller.egg-info/SOURCES.txt'
+[3.358s] writing manifest file '../../build/bts_motor_controller/bts_motor_controller.egg-info/SOURCES.txt'
+[3.358s] running build
+[3.358s] running build_py
+[3.358s] creating /home/caterpillar/ros2_ws/build/bts_motor_controller/build
+[3.361s] creating /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib
+[3.361s] creating /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib/bts_motor_controller
+[3.361s] copying bts_motor_controller/__init__.py -> /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib/bts_motor_controller
+[3.361s] copying bts_motor_controller/motor_node.py -> /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib/bts_motor_controller
+[3.361s] running install
+[3.369s] running install_lib
+[3.410s] creating /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller
+[3.410s] copying /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib/bts_motor_controller/__init__.py -> /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller
+[3.411s] copying /home/caterpillar/ros2_ws/build/bts_motor_controller/build/lib/bts_motor_controller/motor_node.py -> /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller
+[3.411s] byte-compiling /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller/__init__.py to __init__.cpython-312.pyc
+[3.414s] byte-compiling /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller/motor_node.py to motor_node.cpython-312.pyc
+[3.414s] running install_data
+[3.414s] creating /home/caterpillar/ros2_ws/install/bts_motor_controller/share/ament_index
+[3.414s] creating /home/caterpillar/ros2_ws/install/bts_motor_controller/share/ament_index/resource_index
+[3.414s] creating /home/caterpillar/ros2_ws/install/bts_motor_controller/share/ament_index/resource_index/packages
+[3.414s] copying resource/bts_motor_controller -> /home/caterpillar/ros2_ws/install/bts_motor_controller/share/ament_index/resource_index/packages
+[3.414s] copying package.xml -> /home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller
+[3.414s] running install_egg_info
+[3.459s] Copying ../../build/bts_motor_controller/bts_motor_controller.egg-info to /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts_motor_controller-0.0.0-py3.12.egg-info
+[3.460s] running install_scripts
+[3.716s] Installing motor_node script to /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/bts_motor_controller
+[3.716s] writing list of installed files to '/home/caterpillar/ros2_ws/build/bts_motor_controller/install.log'
+[3.830s] Invoked command in '/home/caterpillar/ros2_ws/src/bts_motor_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/bts_motor_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bts_motor_controller build --build-base /home/caterpillar/ros2_ws/build/bts_motor_controller/build install --record /home/caterpillar/ros2_ws/build/bts_motor_controller/install.log --single-version-externally-managed install_data

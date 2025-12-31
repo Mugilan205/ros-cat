@@ -1,131 +1,121 @@
 #!/usr/bin/env python3
-"""
-ESP Serial Odometry Node
-Bridge between ESP32 Serial (ASCII) and ROS 2 Odometry.
-Parses: ODOM,x,y,theta,v,w
-"""
 
 import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Quaternion, TransformStamped
+import tf2_ros
 import serial
 import math
 import time
 
-class EspSerialOdometryNode(Node):
+class ESPSerialToOdom(Node):
+
     def __init__(self):
-        super().__init__('esp_serial_odometry_node')
-        
-        # Configuration
-        self.port = '/dev/ttyUSB1'
-        self.baudrate = 115200
-        self.valid_msg_count = 0
-        self.ser = None
-        
-        # Publisher
-        self.odom_pub = self.create_publisher(Odometry, '/esp/odom', 10)
-        
-        # Timer for serial reading (100Hz to ensure we don't miss data)
-        self.timer = self.create_timer(0.01, self.read_serial_callback)
-        
-        # Timer for connection check (every 2 seconds)
-        self.conn_timer = self.create_timer(2.0, self.check_connection)
-        
-        self.get_logger().info(f"ESP Serial Odometry Node started. Target: {self.port} @ {self.baudrate}")
+        super().__init__('esp_serial_to_odom')
 
-    def check_connection(self):
-        """Ensure serial port is open, retry if not."""
-        if self.ser is None or not self.ser.is_open:
-            try:
-                self.ser = serial.Serial(self.port, self.baudrate, timeout=0, write_timeout=0)
-                self.get_logger().info(f"Successfully connected to {self.port}")
-            except serial.SerialException:
-                self.get_logger().warn(f"Failed to open {self.port}. Retrying...", throttle_duration_sec=10.0)
-                self.ser = None
-
-    def read_serial_callback(self):
-        """Non-blocking read from serial port."""
-        if self.ser is None or not self.ser.is_open:
-            return
+        # Default to /dev/ttyUSB2, but allow override via parameter
+        self.declare_parameter('port', '/dev/ttyUSB2')
+        self.declare_parameter('baud', 115200)
+        
+        self.port = self.get_parameter('port').value
+        self.baud = self.get_parameter('baud').value
 
         try:
-            while self.ser.in_waiting > 0:
-                line = self.ser.readline().decode('utf-8', errors='ignore').strip()
-                if line:
-                    self.parse_and_publish(line)
-        except serial.SerialException as e:
-            self.get_logger().error(f"Serial connection lost: {e}")
-            self.ser.close()
-            self.ser = None
+            self.ser = serial.Serial(self.port, self.baud, timeout=1)
+            # Give some time for serial to initialize
+            time.sleep(2)
+            self.get_logger().info(f"Connected to ESP on {self.port}")
         except Exception as e:
-            self.get_logger().error(f"Unexpected error reading serial: {e}")
+            self.get_logger().fatal(f"Could not open serial port {self.port}: {e}")
+            raise e
 
-    def parse_and_publish(self, line):
-        """Parse ASCII line: ODOM,x,y,theta,v,w"""
-        parts = line.split(',')
+        self.odom_pub = self.create_publisher(Odometry, '/odom', 10)
         
-        # Validation: Start with ODOM and have 6 fields
-        if len(parts) != 6 or parts[0] != 'ODOM':
-            self.get_logger().warn(f"Malformed ESP line: {line}", throttle_duration_sec=5.0)
-            return
+        # REQUIRED FIX: Create TransformBroadcaster
+        self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
+        
+        self.timer = self.create_timer(0.05, self.read_serial)  # 20 Hz
 
+        self.get_logger().info("ESP Serial → /odom bridge started with dynamic TF")
+
+    def read_serial(self):
         try:
-            # Extract values
-            x = float(parts[1])
-            y = float(parts[2])
-            theta = float(parts[3])
-            v = float(parts[4])
-            w = float(parts[5])
+            # Read line from serial
+            line = self.ser.readline().decode('utf-8', errors='ignore').strip()
             
-            # Create Odometry message
-            msg = Odometry()
-            msg.header.stamp = self.get_clock().now().to_msg()
-            msg.header.frame_id = "odom"
-            msg.child_frame_id = "base_link"
+            if not line or not line.startswith("ODOM"):
+                return
 
-            # Pose: Position
-            msg.pose.pose.position.x = x
-            msg.pose.pose.position.y = y
-            msg.pose.pose.position.z = 0.0
+            parts = line.split(",")
+            if len(parts) != 6:
+                return
 
-            # Pose: Orientation (Yaw to Quaternion)
-            msg.pose.pose.orientation.x = 0.0
-            msg.pose.pose.orientation.y = 0.0
-            msg.pose.pose.orientation.z = math.sin(theta / 2.0)
-            msg.pose.pose.orientation.w = math.cos(theta / 2.0)
+            # Protocol: ODOM,x,y,theta,v,w
+            _, x_str, y_str, th_str, v_str, w_str = parts
+            x = float(x_str)
+            y = float(y_str)
+            theta = float(th_str)
+            v = float(v_str)
+            w = float(w_str)
 
-            # Twist: Velocity
-            msg.twist.twist.linear.x = v
-            msg.twist.twist.angular.z = w
+            now = self.get_clock().now().to_msg()
+
+            # 1. Create and Publish Odometry Message
+            odom_msg = Odometry()
+            odom_msg.header.stamp = now
+            odom_msg.header.frame_id = 'odom'
+            odom_msg.child_frame_id = 'base_link'
+
+            odom_msg.pose.pose.position.x = x
+            odom_msg.pose.pose.position.y = y
+            odom_msg.pose.pose.position.z = 0.0
+
+            # Convert yaw to quaternion (REQUIRED FIX logic)
+            qz = math.sin(theta / 2.0)
+            qw = math.cos(theta / 2.0)
             
-            # Initialize covariances to zero (already zero by default, but explicit for clarity)
-            msg.pose.covariance = [0.0] * 36
-            msg.twist.covariance = [0.0] * 36
+            odom_msg.pose.pose.orientation.x = 0.0
+            odom_msg.pose.pose.orientation.y = 0.0
+            odom_msg.pose.pose.orientation.z = qz
+            odom_msg.pose.pose.orientation.w = qw
 
-            # Publish
-            self.odom_pub.publish(msg)
+            odom_msg.twist.twist.linear.x = v
+            odom_msg.twist.twist.angular.z = w
+
+            self.odom_pub.publish(odom_msg)
+
+            # 2. REQUIRED FIX: Broadcast Dynamic TF (odom -> base_link)
+            t = TransformStamped()
+            t.header.stamp = now
+            t.header.frame_id = 'odom'
+            t.child_frame_id = 'base_link'
             
-            # Logging
-            self.valid_msg_count += 1
-            if self.valid_msg_count % 50 == 0:
-                self.get_logger().info(f"Published {self.valid_msg_count} messages. Latest: x={x:.3f}, y={y:.3f}, th={theta:.3f}")
+            t.transform.translation.x = x
+            t.transform.translation.y = y
+            t.transform.translation.z = 0.0
+            
+            t.transform.rotation.x = 0.0
+            t.transform.rotation.y = 0.0
+            t.transform.rotation.z = qz
+            t.transform.rotation.w = qw
 
-        except ValueError:
-            self.get_logger().warn(f"Invalid numeric data from ESP: {line}", throttle_duration_sec=5.0)
+            self.tf_broadcaster.sendTransform(t)
+
+        except Exception as e:
+            self.get_logger().warn(f"Error in read_serial: {e}")
 
 def main(args=None):
     rclpy.init(args=args)
-    node = EspSerialOdometryNode()
+    node = ESPSerialToOdom()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
     finally:
-        if node.ser:
-            node.ser.close()
-        node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            node.destroy_node()
+            rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
-
