@@ -1,0 +1,17 @@
+[2.717s] Invoking command in '/home/caterpillar/ros2_ws/build/bts_motor_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/bts_motor_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/bts_motor_controller/build --no-deps symlink_data
+[3.470s] running develop
+[4.016s] running egg_info
+[4.057s] writing bts_motor_controller.egg-info/PKG-INFO
+[4.057s] writing dependency_links to bts_motor_controller.egg-info/dependency_links.txt
+[4.060s] writing entry points to bts_motor_controller.egg-info/entry_points.txt
+[4.061s] writing requirements to bts_motor_controller.egg-info/requires.txt
+[4.062s] writing top-level names to bts_motor_controller.egg-info/top_level.txt
+[4.151s] reading manifest file 'bts_motor_controller.egg-info/SOURCES.txt'
+[4.151s] writing manifest file 'bts_motor_controller.egg-info/SOURCES.txt'
+[4.187s] running build_ext
+[4.188s] Creating /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages/bts-motor-controller.egg-link (link to .)
+[4.189s] Installing motor_node script to /home/caterpillar/ros2_ws/install/bts_motor_controller/lib/bts_motor_controller
+[4.189s] 
+[4.189s] Installed /home/caterpillar/ros2_ws/build/bts_motor_controller
+[4.189s] running symlink_data
+[4.342s] Invoked command in '/home/caterpillar/ros2_ws/build/bts_motor_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/bts_motor_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/bts_motor_controller/build --no-deps symlink_data

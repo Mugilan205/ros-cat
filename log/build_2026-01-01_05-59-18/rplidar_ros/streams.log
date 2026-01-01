@@ -1,0 +1,57 @@
+[0.444s] Invoking command in '/home/caterpillar/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/caterpillar/ros2_ws/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/caterpillar/ros2_ws/install/rplidar_ros
+[0.494s] -- Found ament_cmake_auto: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_auto/cmake)
+[0.944s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.027s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.863s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.954s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.009s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.064s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.316s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.322s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.464s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.350s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/rplidar_ros` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[3.433s] -- Configuring done (3.0s)
+[3.533s] -- Generating done (0.1s)
+[3.561s] -- Build files have been written to: /home/caterpillar/ros2_ws/build/rplidar_ros
+[3.594s] Invoked command in '/home/caterpillar/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/caterpillar/ros2_ws/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/caterpillar/ros2_ws/install/rplidar_ros
+[3.594s] Invoking command in '/home/caterpillar/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/caterpillar/ros2_ws/build/rplidar_ros -- -j4 -l4
+[3.783s] [ 77%] Built target rplidar_composition_node
+[3.906s] [100%] Built target rplidar_composition
+[3.956s] Invoked command in '/home/caterpillar/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/caterpillar/ros2_ws/build/rplidar_ros -- -j4 -l4
+[3.998s] Invoking command in '/home/caterpillar/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/caterpillar/ros2_ws/build/rplidar_ros
+[4.039s] -- Install configuration: ""
+[4.041s] -- Execute custom install script
+[4.043s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[4.046s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar.launch.py
+[4.046s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch.py
+[4.050s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch.py
+[4.052s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch.py
+[4.052s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch.py
+[4.053s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar.launch.py
+[4.053s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch.py
+[4.053s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch.py
+[4.055s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch.py
+[4.055s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz
+[4.055s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/librplidar_composition_node.so
+[4.055s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/include/rplidar_node.hpp
+[4.056s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/include/visibility.h
+[4.056s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[4.057s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+[4.057s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+[4.057s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+[4.058s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+[4.058s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+[4.059s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+[4.059s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+[4.060s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+[4.061s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+[4.061s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+[4.061s] -- Symlinking: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.dsv
+[4.098s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+[4.098s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/rclcpp_components/rplidar_ros
+[4.100s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.100s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.102s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+[4.102s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+[4.103s] -- Up-to-date symlink: /home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.xml
+[4.109s] Invoked command in '/home/caterpillar/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/caterpillar/ros2_ws/build/rplidar_ros

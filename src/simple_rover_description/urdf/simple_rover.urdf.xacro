@@ -1,26 +1,58 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="simple_rover">
-  <link name="base_link"/>
+
+  <!-- Ground reference -->
+  <link name="base_footprint"/>
+
+  <!-- Robot body -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.4 0.3 0.15"/>
+      </geometry>
+      <origin xyz="0 0 0.075"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- Laser -->
+  <link name="laser_frame">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.05"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Wheels -->
   <link name="left_wheel"/>
   <link name="right_wheel"/>
-  <link name="laser_frame"/>
 
+  <!-- base_footprint → base_link -->
+  <joint name="base_footprint_to_base_link" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- base_link → laser -->
   <joint name="laser_joint" type="fixed">
     <parent link="base_link"/>
     <child link="laser_frame"/>
     <origin xyz="0.2 0 0.15" rpy="0 0 0"/>
   </joint>
 
-  <!-- wheel joints are fixed in this simple model (no visuals needed) -->
+  <!-- Wheels -->
   <joint name="left_wheel_joint" type="fixed">
     <parent link="base_link"/>
     <child link="left_wheel"/>
-    <origin xyz="0 0.12 0" rpy="0 0 0"/>
+    <origin xyz="0 0.12 0"/>
   </joint>
 
   <joint name="right_wheel_joint" type="fixed">
     <parent link="base_link"/>
     <child link="right_wheel"/>
-    <origin xyz="0 -0.12 0" rpy="0 0 0"/>
+    <origin xyz="0 -0.12 0"/>
   </joint>
+
 </robot>
