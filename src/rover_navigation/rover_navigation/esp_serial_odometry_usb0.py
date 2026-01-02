@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ESP8266 serial-to-Odometry bridge for /dev/ttyUSB0 (ROS 2 Jazzy)."""
+"""ESP8266 serial-to-Odometry bridge for /dev/ttyUSB1 (ROS 2 Jazzy)."""
 
 import math
 import serial
@@ -14,7 +14,7 @@ from geometry_msgs.msg import TransformStamped
 class EspSerialOdometryUSB0(Node):
     def __init__(self):
         super().__init__('esp_serial_odometry_usb0')
-        self.port = '/dev/ttyUSB0'
+        self.port = '/dev/ttyUSB1'
         self.baudrate = 115200
         self.ser = None
         self.valid_count = 0

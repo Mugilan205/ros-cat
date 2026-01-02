@@ -30,9 +30,10 @@ gnome-terminal -- bash -c "
 source /opt/ros/jazzy/setup.bash
 source ~/ros2_ws/install/setup.bash 2>/dev/null || true
 echo 'Starting RPLidar...'
-ros2 launch rplidar_ros rplidar.launch.py serial_port:=/dev/ttyUSB1 frame_id:=laser
+ros2 launch rplidar_ros rplidar.launch.py serial_port:=/dev/ttyUSB0 frame_id:=laser
 exec bash
 " &
+
 
 sleep 3
 

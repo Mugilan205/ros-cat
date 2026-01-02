@@ -1,0 +1,417 @@
+[0.149s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.149s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffb7866d20>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffb7bef6b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffb7bef6b0>>)
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.204s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/caterpillar/ros2_ws'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'ros'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['cmake', 'python']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'cmake'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'python'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extensions ['python_setup_py']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(config) by extension 'python_setup_py'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_meta']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_meta'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ros'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['cmake', 'python']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'cmake'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['python_setup_py']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python_setup_py'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ignore_ament_install'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['colcon_meta']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'colcon_meta'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ros'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['cmake', 'python']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'cmake'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'python'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['python_setup_py']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'python_setup_py'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/bts_motor_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/bts_motor_controller) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/bts_motor_controller) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/bts_motor_controller) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/bts_motor_controller) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/bts_motor_controller) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/bts_motor_controller) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/bts_motor_controller) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/bts_motor_controller) by extension 'ros'
+[0.251s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bts_motor_controller' with type 'ros.ament_python' and name 'bts_motor_controller'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_navigation) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_navigation) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_navigation) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_navigation) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_navigation) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_navigation) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_navigation) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_navigation) by extension 'ros'
+[0.253s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rover_navigation' with type 'ros.ament_python' and name 'rover_navigation'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore_ament_install'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_pkg']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_pkg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_meta']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_meta'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ros']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ros'
+[0.254s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rplidar_ros' with type 'ros.ament_cmake' and name 'rplidar_ros'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extension 'ros'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extensions ['cmake', 'python']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extension 'cmake'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extension 'python'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extensions ['python_setup_py']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description) by extension 'python_setup_py'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extension 'ros'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extensions ['cmake', 'python']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extension 'cmake'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extension 'python'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extensions ['python_setup_py']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_rover_description/urdf) by extension 'python_setup_py'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/your_robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/your_robot_bringup) by extension 'ignore'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/your_robot_bringup) by extension 'ignore_ament_install'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/your_robot_bringup) by extensions ['colcon_pkg']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/your_robot_bringup) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/your_robot_bringup) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/your_robot_bringup) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/your_robot_bringup) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/your_robot_bringup) by extension 'ros'
+[0.257s] DEBUG:colcon.colcon_core.package_identification:Package 'src/your_robot_bringup' with type 'ros.ament_python' and name 'your_robot_bringup'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extension 'ignore'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extension 'ignore_ament_install'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extensions ['colcon_pkg']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extension 'colcon_pkg'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extensions ['colcon_meta']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extension 'colcon_meta'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extensions ['ros']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extension 'ros'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extensions ['cmake', 'python']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extension 'cmake'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extension 'python'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extensions ['python_setup_py']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(urdf) by extension 'python_setup_py'
+[0.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.286s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 383 installed packages in /opt/ros/jazzy
+[0.288s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'bts_motor_controller' build argument 'cmake_args' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'bts_motor_controller' build argument 'cmake_target' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'bts_motor_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'bts_motor_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'bts_motor_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'bts_motor_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'bts_motor_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'bts_motor_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'bts_motor_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.361s] DEBUG:colcon.colcon_core.verb:Building package 'bts_motor_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/caterpillar/ros2_ws/build/bts_motor_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/caterpillar/ros2_ws/install/bts_motor_controller', 'merge_install': False, 'path': '/home/caterpillar/ros2_ws/src/bts_motor_controller', 'symlink_install': True, 'test_result_base': None}
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rover_navigation' build argument 'cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rover_navigation' build argument 'cmake_target' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rover_navigation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rover_navigation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rover_navigation' build argument 'cmake_clean_first' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rover_navigation' build argument 'cmake_force_configure' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rover_navigation' build argument 'ament_cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rover_navigation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rover_navigation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.362s] DEBUG:colcon.colcon_core.verb:Building package 'rover_navigation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/caterpillar/ros2_ws/build/rover_navigation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/caterpillar/ros2_ws/install/rover_navigation', 'merge_install': False, 'path': '/home/caterpillar/ros2_ws/src/rover_navigation', 'symlink_install': True, 'test_result_base': None}
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.363s] DEBUG:colcon.colcon_core.verb:Building package 'rplidar_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/caterpillar/ros2_ws/build/rplidar_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/caterpillar/ros2_ws/install/rplidar_ros', 'merge_install': False, 'path': '/home/caterpillar/ros2_ws/src/rplidar_ros', 'symlink_install': True, 'test_result_base': None}
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'your_robot_bringup' build argument 'cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'your_robot_bringup' build argument 'cmake_target' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'your_robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'your_robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'your_robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'your_robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'your_robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'your_robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'your_robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.363s] DEBUG:colcon.colcon_core.verb:Building package 'your_robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/caterpillar/ros2_ws/build/your_robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/caterpillar/ros2_ws/install/your_robot_bringup', 'merge_install': False, 'path': '/home/caterpillar/ros2_ws/src/your_robot_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.363s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.365s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.365s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/caterpillar/ros2_ws/src/bts_motor_controller' with build type 'ament_python'
+[0.366s] Level 1:colcon.colcon_core.shell:create_environment_hook('bts_motor_controller', 'ament_prefix_path')
+[0.370s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.370s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/hook/ament_prefix_path.ps1'
+[0.372s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/hook/ament_prefix_path.dsv'
+[0.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/hook/ament_prefix_path.sh'
+[0.376s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.376s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.381s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/caterpillar/ros2_ws/src/rplidar_ros' with build type 'ament_cmake'
+[0.381s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/caterpillar/ros2_ws/src/rplidar_ros'
+[0.381s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.381s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.386s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/caterpillar/ros2_ws/src/rover_navigation' with build type 'ament_python'
+[0.387s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_navigation', 'ament_prefix_path')
+[0.387s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/hook/ament_prefix_path.ps1'
+[0.388s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/hook/ament_prefix_path.dsv'
+[0.389s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/hook/ament_prefix_path.sh'
+[0.390s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.390s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.760s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/caterpillar/ros2_ws/src/bts_motor_controller'
+[0.761s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.761s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.775s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/caterpillar/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/caterpillar/ros2_ws/build/rplidar_ros -- -j4 -l4
+[1.300s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/caterpillar/ros2_ws/src/rover_navigation'
+[1.300s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.301s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/caterpillar/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/caterpillar/ros2_ws/build/rplidar_ros -- -j4 -l4
+[1.337s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/caterpillar/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/caterpillar/ros2_ws/build/rplidar_ros
+[1.406s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[1.409s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/caterpillar/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/caterpillar/ros2_ws/build/rplidar_ros
+[1.410s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros' for CMake module files
+[1.411s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros' for CMake config files
+[1.412s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[1.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[1.413s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[1.416s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[1.417s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros/lib'
+[1.418s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'ld_library_path_lib')
+[1.418s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.ps1'
+[1.419s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.dsv'
+[1.421s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.sh'
+[1.422s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros/bin'
+[1.423s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[1.423s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros/lib/python3.12/site-packages'
+[1.424s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros/bin'
+[1.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[1.426s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[1.428s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.sh'
+[1.429s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.bash'
+[1.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[1.432s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/caterpillar/ros2_ws/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[1.434s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[1.434s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros' for CMake module files
+[1.436s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros' for CMake config files
+[1.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[1.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[1.438s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[1.439s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[1.440s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros/lib'
+[1.441s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'ld_library_path_lib')
+[1.441s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.ps1'
+[1.442s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.dsv'
+[1.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.sh'
+[1.444s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros/bin'
+[1.444s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[1.444s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros/lib/python3.12/site-packages'
+[1.445s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rplidar_ros/bin'
+[1.445s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[1.447s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[1.448s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.sh'
+[1.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.bash'
+[1.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[1.450s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/caterpillar/ros2_ws/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[2.410s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/caterpillar/ros2_ws/build/bts_motor_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/bts_motor_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/bts_motor_controller/build --no-deps symlink_data
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index/resource_index/packages/rover_navigation
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/package.xml
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch/obstacle_detection.launch.py
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch/rrt_planner.launch.py
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch/full_navigation.launch.py
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch/a_star_lwb_navigation.launch.py
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/config/nav2_params.yaml
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/config/slam_params.yaml
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/a_star_planner
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/cmdvel_to_wheels
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/esp8266_bridge
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/esp_serial_odometry_node
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/lwb_planner
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/navigation_dashboard
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/obstacle_detection
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/odometry_node
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/path_executor
+[2.445s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/planner_manager
+[2.446s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation/rrt_planner
+[2.449s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/caterpillar/ros2_ws/build/rover_navigation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/rover_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/rover_navigation/build --no-deps symlink_data --force
+[3.578s] Level 1:colcon.colcon_core.shell:create_environment_hook('bts_motor_controller', 'pythonpath_develop')
+[3.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/build/bts_motor_controller/share/bts_motor_controller/hook/pythonpath_develop.ps1'
+[3.579s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/build/bts_motor_controller/share/bts_motor_controller/hook/pythonpath_develop.dsv'
+[3.581s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/caterpillar/ros2_ws/build/bts_motor_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/bts_motor_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/bts_motor_controller/build --no-deps symlink_data
+[3.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/build/bts_motor_controller/share/bts_motor_controller/hook/pythonpath_develop.sh'
+[3.586s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/bts_motor_controller' for CMake module files
+[3.587s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/bts_motor_controller' for CMake config files
+[3.589s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/bts_motor_controller/lib'
+[3.590s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/bts_motor_controller/bin'
+[3.590s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/pkgconfig/bts_motor_controller.pc'
+[3.590s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages'
+[3.590s] Level 1:colcon.colcon_core.shell:create_environment_hook('bts_motor_controller', 'pythonpath')
+[3.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/hook/pythonpath.ps1'
+[3.596s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/hook/pythonpath.dsv'
+[3.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/hook/pythonpath.sh'
+[3.601s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/bts_motor_controller/bin'
+[3.601s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bts_motor_controller)
+[3.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/package.ps1'
+[3.605s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/package.dsv'
+[3.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/package.sh'
+[3.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/package.bash'
+[3.610s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/bts_motor_controller/share/bts_motor_controller/package.zsh'
+[3.612s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/caterpillar/ros2_ws/install/bts_motor_controller/share/colcon-core/packages/bts_motor_controller)
+[3.614s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/caterpillar/ros2_ws/src/your_robot_bringup' with build type 'ament_python'
+[3.614s] Level 1:colcon.colcon_core.shell:create_environment_hook('your_robot_bringup', 'ament_prefix_path')
+[3.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/hook/ament_prefix_path.ps1'
+[3.617s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/hook/ament_prefix_path.dsv'
+[3.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/hook/ament_prefix_path.sh'
+[3.624s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.624s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.640s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_navigation', 'pythonpath_develop')
+[3.641s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/build/rover_navigation/share/rover_navigation/hook/pythonpath_develop.ps1'
+[3.642s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/caterpillar/ros2_ws/build/rover_navigation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/rover_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/rover_navigation/build --no-deps symlink_data --force
+[3.643s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/build/rover_navigation/share/rover_navigation/hook/pythonpath_develop.dsv'
+[3.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/build/rover_navigation/share/rover_navigation/hook/pythonpath_develop.sh'
+[3.647s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rover_navigation' for CMake module files
+[3.648s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rover_navigation' for CMake config files
+[3.650s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rover_navigation/lib'
+[3.650s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rover_navigation/bin'
+[3.650s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rover_navigation/lib/pkgconfig/rover_navigation.pc'
+[3.651s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages'
+[3.651s] Level 1:colcon.colcon_core.shell:create_environment_hook('rover_navigation', 'pythonpath')
+[3.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/hook/pythonpath.ps1'
+[3.653s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/hook/pythonpath.dsv'
+[3.654s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/hook/pythonpath.sh'
+[3.656s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/rover_navigation/bin'
+[3.656s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rover_navigation)
+[3.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/package.ps1'
+[3.658s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/package.dsv'
+[3.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/package.sh'
+[3.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/package.bash'
+[3.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/package.zsh'
+[3.663s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/caterpillar/ros2_ws/install/rover_navigation/share/colcon-core/packages/rover_navigation)
+[4.109s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/caterpillar/ros2_ws/src/your_robot_bringup'
+[4.110s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.110s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.354s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/your_robot_bringup/share/ament_index/resource_index/packages/your_robot_bringup
+[5.354s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/package.xml
+[5.355s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/your_robot_bringup/rrt_autonomous
+[5.355s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/your_robot_bringup/wheel_odom
+[5.360s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/caterpillar/ros2_ws/build/your_robot_bringup': AMENT_PREFIX_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros:/home/caterpillar/ros2_ws/install/bts_motor_controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/caterpillar/ros2_ws/build/your_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/build/bts_motor_controller:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/your_robot_bringup/build --no-deps symlink_data --force
+[6.646s] Level 1:colcon.colcon_core.shell:create_environment_hook('your_robot_bringup', 'pythonpath_develop')
+[6.647s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/build/your_robot_bringup/src/share/your_robot_bringup/hook/pythonpath_develop.ps1'
+[6.647s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/caterpillar/ros2_ws/build/your_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros:/home/caterpillar/ros2_ws/install/bts_motor_controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/caterpillar/ros2_ws/build/your_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/build/bts_motor_controller:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/your_robot_bringup/build --no-deps symlink_data --force
+[6.648s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/build/your_robot_bringup/src/share/your_robot_bringup/hook/pythonpath_develop.dsv'
+[6.651s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/build/your_robot_bringup/src/share/your_robot_bringup/hook/pythonpath_develop.sh'
+[6.652s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/your_robot_bringup' for CMake module files
+[6.652s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/your_robot_bringup' for CMake config files
+[6.653s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/your_robot_bringup/lib'
+[6.653s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/your_robot_bringup/bin'
+[6.653s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/pkgconfig/your_robot_bringup.pc'
+[6.653s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages'
+[6.653s] Level 1:colcon.colcon_core.shell:create_environment_hook('your_robot_bringup', 'pythonpath')
+[6.654s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/hook/pythonpath.ps1'
+[6.654s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/hook/pythonpath.dsv'
+[6.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/hook/pythonpath.sh'
+[6.657s] Level 1:colcon.colcon_core.environment:checking '/home/caterpillar/ros2_ws/install/your_robot_bringup/bin'
+[6.657s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(your_robot_bringup)
+[6.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/package.ps1'
+[6.658s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/package.dsv'
+[6.659s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/package.sh'
+[6.659s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/package.bash'
+[6.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/package.zsh'
+[6.661s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/caterpillar/ros2_ws/install/your_robot_bringup/share/colcon-core/packages/your_robot_bringup)
+[6.662s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.664s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.665s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.666s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.684s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.684s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.684s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.727s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.728s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/caterpillar/ros2_ws/install/local_setup.ps1'
+[6.729s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/caterpillar/ros2_ws/install/_local_setup_util_ps1.py'
+[6.732s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/caterpillar/ros2_ws/install/setup.ps1'
+[6.735s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/caterpillar/ros2_ws/install/local_setup.sh'
+[6.736s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/caterpillar/ros2_ws/install/_local_setup_util_sh.py'
+[6.737s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/caterpillar/ros2_ws/install/setup.sh'
+[6.739s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/caterpillar/ros2_ws/install/local_setup.bash'
+[6.743s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/caterpillar/ros2_ws/install/setup.bash'
+[6.745s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/caterpillar/ros2_ws/install/local_setup.zsh'
+[6.745s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/caterpillar/ros2_ws/install/setup.zsh'

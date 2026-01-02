@@ -1,0 +1,35 @@
+[1.949s] Invoking command in '/home/caterpillar/ros2_ws/build/rover_navigation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/rover_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/rover_navigation/build --no-deps symlink_data --force
+[2.509s] running develop
+[2.860s] running egg_info
+[2.895s] writing rover_navigation.egg-info/PKG-INFO
+[2.895s] writing dependency_links to rover_navigation.egg-info/dependency_links.txt
+[2.898s] writing entry points to rover_navigation.egg-info/entry_points.txt
+[2.898s] writing requirements to rover_navigation.egg-info/requires.txt
+[2.899s] writing top-level names to rover_navigation.egg-info/top_level.txt
+[2.969s] reading manifest file 'rover_navigation.egg-info/SOURCES.txt'
+[2.971s] writing manifest file 'rover_navigation.egg-info/SOURCES.txt'
+[3.010s] running build_ext
+[3.010s] Creating /home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages/rover-navigation.egg-link (link to .)
+[3.011s] Installing a_star_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.012s] Installing cmdvel_to_wheels script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.012s] Installing esp8266_bridge script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.012s] Installing esp_serial_odometry_node script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.012s] Installing lwb_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.013s] Installing navigation_dashboard script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.013s] Installing obstacle_detection script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.013s] Installing odometry_node script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.013s] Installing path_executor script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.014s] Installing planner_manager script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.014s] Installing rrt_planner script to /home/caterpillar/ros2_ws/install/rover_navigation/lib/rover_navigation
+[3.014s] 
+[3.014s] Installed /home/caterpillar/ros2_ws/build/rover_navigation
+[3.015s] running symlink_data
+[3.015s] symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/resource/rover_navigation -> /home/caterpillar/ros2_ws/install/rover_navigation/share/ament_index/resource_index/packages
+[3.015s] symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/package.xml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation
+[3.015s] symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/launch/obstacle_detection.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.016s] symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/launch/rrt_planner.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.016s] symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/launch/full_navigation.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.016s] symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/launch/a_star_lwb_navigation.launch.py -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/launch
+[3.016s] symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/config/nav2_params.yaml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/config
+[3.016s] symbolically linking /home/caterpillar/ros2_ws/build/rover_navigation/config/slam_params.yaml -> /home/caterpillar/ros2_ws/install/rover_navigation/share/rover_navigation/config
+[3.164s] Invoked command in '/home/caterpillar/ros2_ws/build/rover_navigation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/caterpillar/ros2_ws/build/rover_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/rover_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/rover_navigation/build --no-deps symlink_data --force

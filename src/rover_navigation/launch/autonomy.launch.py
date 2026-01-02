@@ -33,6 +33,10 @@ def generate_launch_description():
         Node(
             package="rover_navigation",
             executable="esp_serial_odometry_node",
+            parameters=[
+                {"port": "/dev/ttyUSB1"},
+                {"baud": 115200},
+            ],
             output="screen"
         ),
 

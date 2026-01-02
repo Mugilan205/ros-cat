@@ -51,7 +51,7 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_sim_time': LaunchConfiguration('use_sim_time'),
-            'port': '/dev/ttyUSB0',
+            'port': '/dev/ttyUSB1',
             'baud': 115200,
         }]
     )
@@ -65,7 +65,7 @@ def generate_launch_description():
         name='rplidar_composition',
         output='screen',
         parameters=[{
-            'serial_port': '/dev/ttyUSB1',
+            'serial_port': '/dev/ttyUSB0',
             'serial_baudrate': 115200,
             'frame_id': 'laser_frame',
             'inverted': False,

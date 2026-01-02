@@ -1,0 +1,18 @@
+[1.424s] Invoking command in '/home/caterpillar/ros2_ws/build/your_robot_bringup': AMENT_PREFIX_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros:/home/caterpillar/ros2_ws/install/bts_motor_controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/caterpillar/ros2_ws/build/your_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/build/bts_motor_controller:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/your_robot_bringup/build --no-deps symlink_data
+[1.960s] running develop
+[2.316s] running egg_info
+[2.348s] writing src/your_robot_bringup.egg-info/PKG-INFO
+[2.349s] writing dependency_links to src/your_robot_bringup.egg-info/dependency_links.txt
+[2.352s] writing entry points to src/your_robot_bringup.egg-info/entry_points.txt
+[2.353s] writing requirements to src/your_robot_bringup.egg-info/requires.txt
+[2.353s] writing top-level names to src/your_robot_bringup.egg-info/top_level.txt
+[2.424s] reading manifest file 'src/your_robot_bringup.egg-info/SOURCES.txt'
+[2.425s] writing manifest file 'src/your_robot_bringup.egg-info/SOURCES.txt'
+[2.460s] running build_ext
+[2.460s] Creating /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your-robot-bringup.egg-link (link to src)
+[2.461s] Installing rrt_autonomous script to /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/your_robot_bringup
+[2.461s] Installing wheel_odom script to /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/your_robot_bringup
+[2.461s] 
+[2.462s] Installed /home/caterpillar/ros2_ws/build/your_robot_bringup/src
+[2.462s] running symlink_data
+[2.555s] Invoked command in '/home/caterpillar/ros2_ws/build/your_robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros:/home/caterpillar/ros2_ws/install/bts_motor_controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/caterpillar/ros2_ws/install/rplidar_ros/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/caterpillar/ros2_ws/build/your_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages:/home/caterpillar/ros2_ws/build/bts_motor_controller:/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/caterpillar/ros2_ws/build/your_robot_bringup/build --no-deps symlink_data

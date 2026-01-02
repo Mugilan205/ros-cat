@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing src/your_robot_bringup.egg-info/PKG-INFO
+writing dependency_links to src/your_robot_bringup.egg-info/dependency_links.txt
+writing entry points to src/your_robot_bringup.egg-info/entry_points.txt
+writing requirements to src/your_robot_bringup.egg-info/requires.txt
+writing top-level names to src/your_robot_bringup.egg-info/top_level.txt
+reading manifest file 'src/your_robot_bringup.egg-info/SOURCES.txt'
+writing manifest file 'src/your_robot_bringup.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/python3.12/site-packages/your-robot-bringup.egg-link (link to src)
+Installing rrt_autonomous script to /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/your_robot_bringup
+Installing wheel_odom script to /home/caterpillar/ros2_ws/install/your_robot_bringup/lib/your_robot_bringup
+
+Installed /home/caterpillar/ros2_ws/build/your_robot_bringup/src
+running symlink_data
+symbolically linking /home/caterpillar/ros2_ws/build/your_robot_bringup/resource/your_robot_bringup -> /home/caterpillar/ros2_ws/install/your_robot_bringup/share/ament_index/resource_index/packages
+symbolically linking /home/caterpillar/ros2_ws/build/your_robot_bringup/package.xml -> /home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup
+symbolically linking /home/caterpillar/ros2_ws/build/your_robot_bringup/launch/bringup.launch.py -> /home/caterpillar/ros2_ws/install/your_robot_bringup/share/your_robot_bringup/launch

@@ -1,0 +1,20 @@
+[INFO] [launch]: All log files can be found below /home/caterpillar/.ros/log/2026-01-02-16-29-32-213314-caterpillar-desktop-7429
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [rplidar_composition-1]: process started with pid [7433]
+[INFO] [motor_node-2]: process started with pid [7434]
+[rplidar_composition-1] [INFO] [1767351572.417699557] [rplidar_node]: RPLIDAR running on ROS 2 package rplidar_ros. SDK Version: '1.12.0'
+[motor_node-2] [ERROR] [1767351572.946504416] [motor_controller]: pigpio daemon not running!
+[motor_node-2] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+[motor_node-2] Can't connect to pigpio at localhost(8888)
+[motor_node-2] 
+[motor_node-2] Did you start the pigpio daemon? E.g. sudo pigpiod
+[motor_node-2] 
+[motor_node-2] Did you specify the correct Pi host/port in the environment
+[motor_node-2] variables PIGPIO_ADDR/PIGPIO_PORT?
+[motor_node-2] E.g. export PIGPIO_ADDR=soft, export PIGPIO_PORT=8888
+[motor_node-2] 
+[motor_node-2] Did you specify the correct Pi host/port in the
+[motor_node-2] pigpio.pi() function? E.g. pigpio.pi('soft', 8888)
+[motor_node-2] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+[ERROR] [motor_node-2]: process has died [pid 7434, exit code 1, cmd '/home/caterpillar/ros2_ws/install/bts_motor_controller/lib/bts_motor_controller/motor_node --ros-args'].
+[rplidar_composition-1] [ERROR] [1767351576.966802249] [rplidar_node]: Error, operation time out. RESULT_OPERATION_TIMEOUT!
