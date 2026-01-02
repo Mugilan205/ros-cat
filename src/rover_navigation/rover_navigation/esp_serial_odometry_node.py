@@ -65,7 +65,7 @@ class ESPSerialToOdom(Node):
             odom_msg = Odometry()
             odom_msg.header.stamp = now
             odom_msg.header.frame_id = 'odom'
-            odom_msg.child_frame_id = 'base_footprint'
+            odom_msg.child_frame_id = 'base_link'
 
             odom_msg.pose.pose.position.x = x
             odom_msg.pose.pose.position.y = y
@@ -85,11 +85,11 @@ class ESPSerialToOdom(Node):
 
             self.odom_pub.publish(odom_msg)
 
-            # 2. REQUIRED FIX: Broadcast Dynamic TF (odom -> base_footprint)
+            # 2. Broadcast Dynamic TF (odom -> base_link)
             t = TransformStamped()
             t.header.stamp = now
             t.header.frame_id = 'odom'
-            t.child_frame_id = 'base_footprint'
+            t.child_frame_id = 'base_link'
             
             t.transform.translation.x = x
             t.transform.translation.y = y
